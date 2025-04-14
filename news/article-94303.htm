@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freetopvpn.github.io/news/article-94303.htm" />
+    <meta charset="utf-8">
+    <title>vue如何根据条件判断按钮是否可以点击_vue.js</title>
+        <meta name="description" content="目录  根据条件判断按钮是否可以点击  方法一：使用v-if 、v-else 来判断 方法二：增加一个变量,判断  vue判断点击当前元素  需要判断你是点击了遮罩层还是form表单 接下来是分别对e" />
+        <link rel="icon" href="/assets/website/img/v2rayclashnodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费最佳VPN 推荐VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freetopvpn.github.io/news/article-94303.htm" />
+    <meta property="og:site_name" content="免费最佳VPN 推荐VPN免费节点订阅官网" />
+    <meta property="og:title" content="vue如何根据条件判断按钮是否可以点击_vue.js" />
+    <meta property="og:image" content="https://freetopvpn.github.io/uploads/20240602/ef4972e5506a9de512d13d70b9798cd8.webp" />
+        <meta property="og:release_date" content="2025-04-12T08:58:21" />
+    <meta property="og:updated_time" content="2025-04-12T08:58:21" />
+        <meta property="og:description" content="目录  根据条件判断按钮是否可以点击  方法一：使用v-if 、v-else 来判断 方法二：增加一个变量,判断  vue判断点击当前元素  需要判断你是点击了遮罩层还是form表单 接下来是分别对e" />
+        
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="vue如何根据条件判断按钮是否可以点击_vue.js">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-22K1GNRV1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-22K1GNRV1V');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+                        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="/" class="navbar-brand p-0">
+                                        <span>免费最佳VPN</span>
+                                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                                                <a href="/" class="nav-item nav-link">首页</a>
+                                                <a href="/free-nodes/" class="nav-item nav-link">免费节点</a>
+                                                <a href="/paid-subscribe/" class="nav-item nav-link">推荐机场</a>
+                                                <a href="/news/" class="nav-item nav-link">新闻资讯</a>
+                                                <a href="/client.htm" class="nav-item nav-link">客户端</a>
+                                            </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary page-header">
+                <div class="container text-center">
+                    <h1 class="text-white animated zoomIn mb-3">vue如何根据条件判断按钮是否可以点击_vue.js</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="/">首页</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="/news/">新闻资讯</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">正文</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl">
+            <div class="container">
+                <div class="row" id="list">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">根据条件判断按钮是否可以点击</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_0_0" rel="nofollow">方法一：使用v-if 、v-else 来判断</a></li> <li><a href="#_lab2_0_1" rel="nofollow">方法二：增加一个变量,判断</a></li> </ul> <li><a href="#_label1" rel="nofollow">vue判断点击当前元素</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_1_2" rel="nofollow">需要判断你是点击了遮罩层还是form表单</a></li> <li><a href="#_lab2_1_3" rel="nofollow">接下来是分别对e.currentTarget、e.target打印</a></li> </ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>根据条件判断按钮是否可以点击</h2> <p>按钮当在特定环境下不可点击，需要根据判断来控制点击事件。</p> <p class="maodian"><a name="_lab2_0_0" rel="nofollow"></a></p> <h3>方法一：使用v-if 、v-else 来判断</h3> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;      &lt;div&gt;          &lt;el-button v-if="!isDisabled"&gt;&lt;/el-button&gt;          &lt;el-button v-else @click="getDetail()"&gt;&lt;/el-button&gt;      &lt;/div&gt;  &lt;/template&gt;</pre> </div> <p class="maodian"><a name="_lab2_0_1" rel="nofollow"></a></p> <h3>方法二：增加一个变量,判断</h3> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;  &lt;el-button @click="!isDisabled &amp;&amp; getDetail()"&gt;&lt;/el-button&gt;  &lt;/template&gt;</pre> </div> <div class="ay1code"> <pre class="brush:js;">&lt;script&gt;  data(){      return{          isDisabled:true,  //为true时可以点击，false时不可点击      }  }  &lt;/script&gt;</pre> </div> <p>两种方法都可以，但第二种相对来说编写的代码更少，具体怎么用看个人习惯。  </p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>vue判断点击当前元素</h2> <p><strong>点击按钮，出现弹窗；然后点击遮罩层，当前弹窗消失。</strong></p> <p style="text-align:center"><img decoding="async" alt="在这里插入图片描述" src="http://img.555519.xyz/uploads3/20220420/daf4430faf326471612b9e98018cdaca.jpg"></p> <p>一开始都会在遮罩层上绑定点击事件，但是这样的话，点击了form表单，当前弹窗也会消失。</p> <p class="maodian"><a name="_lab2_1_2" rel="nofollow"></a></p> <h3>需要判断你是点击了遮罩层还是form表单</h3> <p>1.在遮罩层上绑定点击事件 @click=“showfun2($event)”</p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;div class="topfrom" v-show="msg" @click="showfun2($event)"&gt;      &lt;!--子组件--&gt;      &lt;fromdemo btndata="点击咨询"&gt;&lt;/fromdemo&gt;    &lt;/div&gt;</pre> </div> <p>2.判断是否点击了当前元素 e.currentTarget === e.target</p> <div class="ay1code"> <pre class="brush:js;">showfun2(e) {      if (e.currentTarget === e.target) {          this.msg = false      }  },</pre> </div> <p>以上就完成当前事件点击元素的判断。</p> <p class="maodian"><a name="_lab2_1_3" rel="nofollow"></a></p> <h3>接下来是分别对e.currentTarget、e.target打印</h3> <div class="ay1code"> <pre class="brush:js;">showfun2(e) {      console.log(e.currentTarget)      console.log(e.target)  },</pre> </div> <p><strong>第一次点击 遮罩层 </strong></p> <p style="text-align:center"><img decoding="async" alt="在这里插入图片描述" src="http://img.555519.xyz/uploads3/20220420/c6248c78246179b90fbda8582922dd41.jpg"></p> <p><strong>第二次点击 form表单</strong></p> <p style="text-align:center"><img decoding="async" alt="在这里插入图片描述" src="http://img.555519.xyz/uploads3/20220420/479a87b1709193d23e46a0847fb91800.jpg"></p> <p>发现 e.currentTarget 打印的始终是，绑定点击事件的元素。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-93371.htm">农大动物医院怎么样好不好挂号（农大动物医院地址和联系电话）</a></p>
+                                        <p>下一个：<a href="/news/article-94305.htm">本人想领养一只泰迪（我想领养一只泰迪狗狗）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-4-8-free-node-subscribe.htm" title="免费最佳VPN | 4月8日22.7M/S|免费Clash/SSR/Shadowrocket/V2ray订阅节点分享">免费最佳VPN | 4月8日22.7M/S|免费Clash/SSR/Shadowrocket/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-75606.htm" title="宠物用品批发进货市场（宠物用品店批发）">宠物用品批发进货市场（宠物用品店批发）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-3-node-share-links.htm" title="免费最佳VPN | 4月3日18.8M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点分享">免费最佳VPN | 4月3日18.8M/S|免费Clash/V2ray/Shadowrocket/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-free-high-speed-nodes.htm" title="免费最佳VPN | 3月21日20.3M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享">免费最佳VPN | 3月21日20.3M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-89642.htm" title="狗狗的领养协议（狗狗领养协议书范本）">狗狗的领养协议（狗狗领养协议书范本）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-23-free-node-subscribe.htm" title="免费最佳VPN | 3月23日20.9M/S|免费V2ray/Clash/SSR/Shadowrocket订阅节点分享">免费最佳VPN | 3月23日20.9M/S|免费V2ray/Clash/SSR/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-27-free-subscribe-node.htm" title="免费最佳VPN | 3月27日21M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享">免费最佳VPN | 3月27日21M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-11-clash-v2ray-ss-ssr.htm" title="免费最佳VPN | 4月11日21.9M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享">免费最佳VPN | 4月11日21.9M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-85315.htm" title="猫咪3针疫苗间隔多久打第二针 猫咪3针疫苗间隔多久打第二针疫苗">猫咪3针疫苗间隔多久打第二针 猫咪3针疫苗间隔多久打第二针疫苗</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-18-free-subscribe-node.htm" title="免费最佳VPN | 3月18日20.1M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享">免费最佳VPN | 3月18日20.1M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">42</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">59</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+
+                <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            免费最佳VPN 推荐VPN免费节点订阅官网 版权所有 Powered by WordPress
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/wow/wow.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/easing/easing.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/waypoints/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Template Javascript -->
+        <script src="/assets/website/js/frontend/v2rayclashnodes/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+</body>
+
+</html>
