@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freetopvpn.github.io/news/article-96394.htm" />
+    <meta charset="utf-8">
+    <title>【openstack】cloudkitty组件，入门级安装（快速）_在线工具</title>
+        <meta name="description" content="@  目录  前言  架构  安装 配置 启动 检索并安装 CloudKitty 的仪表板     前言 什么是CloudKitty？ CloudKitty是OpenStack等的评级即服务项目。该项" />
+        <link rel="icon" href="/assets/website/img/v2rayclashnodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费最佳VPN 推荐VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freetopvpn.github.io/news/article-96394.htm" />
+    <meta property="og:site_name" content="免费最佳VPN 推荐VPN免费节点订阅官网" />
+    <meta property="og:title" content="【openstack】cloudkitty组件，入门级安装（快速）_在线工具" />
+    <meta property="og:image" content="https://freetopvpn.github.io/uploads/20240602/b05e38e23632d15581abf15ddcb32f08.webp" />
+        <meta property="og:release_date" content="2025-04-15T06:00:54" />
+    <meta property="og:updated_time" content="2025-04-15T06:00:54" />
+        <meta property="og:description" content="@  目录  前言  架构  安装 配置 启动 检索并安装 CloudKitty 的仪表板     前言 什么是CloudKitty？ CloudKitty是OpenStack等的评级即服务项目。该项" />
+        
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="【openstack】cloudkitty组件，入门级安装（快速）_在线工具">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/style.css" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-22K1GNRV1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-22K1GNRV1V');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+                        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="/" class="navbar-brand p-0">
+                                        <span>免费最佳VPN</span>
+                                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                                                <a href="/" class="nav-item nav-link">首页</a>
+                                                <a href="/free-nodes/" class="nav-item nav-link">免费节点</a>
+                                                <a href="/paid-subscribe/" class="nav-item nav-link">推荐机场</a>
+                                                <a href="/news/" class="nav-item nav-link">新闻资讯</a>
+                                                <a href="/client.htm" class="nav-item nav-link">客户端</a>
+                                            </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary page-header">
+                <div class="container text-center">
+                    <h1 class="text-white animated zoomIn mb-3">【openstack】cloudkitty组件，入门级安装（快速）_在线工具</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="/">首页</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="/news/">新闻资讯</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">正文</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl">
+            <div class="container">
+                <div class="row" id="list">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                  				  				  				<p>@</p> <div class="toc"> <div class="toc-container-header">目录</div> <ul> <li><a href="#%E5%89%8D%E8%A8%80"  rel="nofollow">前言</a></li> <li> <a href="#%E6%9E%B6%E6%9E%84"  rel="nofollow">架构</a></p> <ul> <li><a href="#%E5%AE%89%E8%A3%85"  rel="nofollow">安装</a></li> <li><a href="#%E9%85%8D%E7%BD%AE"  rel="nofollow">配置</a></li> <li><a href="#%E5%90%AF%E5%8A%A8"  rel="nofollow">启动</a></li> <li><a href="#%E6%A3%80%E7%B4%A2%E5%B9%B6%E5%AE%89%E8%A3%85-cloudkitty-%E7%9A%84%E4%BB%AA%E8%A1%A8%E6%9D%BF"  rel="nofollow">检索并安装 CloudKitty 的仪表板</a></li> </ul> </li> </ul> </div> <h2 id="前言">前言</h2> <p><strong>什么是CloudKitty？</strong><br /> CloudKitty是OpenStack等的评级即服务项目。该项目旨在成为云的退款和评级的通用解决方案。从历史上看，它只能在OpenStack上下文中运行它，但现在可以在独立模式下运行CloudKitty。</p> <p>CloudKitty允许进行基于指标的评级：它轮询终端节点以检索有关特定指标的度量值和元数据，将评级规则应用于收集的数据，并将评级数据推送到其存储后端。</p> <p>CloudKitty是高度模块化的，这使得添加新功能变得容易。</p> <h2 id="架构">架构</h2> <p>CloudKitty可以分为四大部分：</p> <ul> <li>Data retrieval (API)  数据检索</li> <li>Data collection (cloudkitty-processor)  数据收集</li> <li>Data rating  数据评级</li> <li>Data storage  数据存储</li> </ul> <p>这些部分由两个进程处理：和 。数据检索部分由进程处理，其他部分由 处理。cloudkitty-apicloudkitty-processorcloudkitty-apicloudkitty-processor</p> <p>以下是 CloudKitty 架构的概述：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220507/19461b53a793446d0b011f3ed3037df1.jpg" alt="【openstack】cloudkitty组件，入门级安装（快速）_在线工具"></p> <h3 id="安装">安装</h3> <pre><code class="language-bash">yum install openstack-cloudkitty-api openstack-cloudkitty-processor openstack-cloudkitty-ui </code></pre> <h3 id="配置">配置</h3> <p>编辑<code>/etc/cloudkitty/cloudkitty.conf</code>以配置 CloudKitty</p> <pre><code class="language-bash">[DEFAULT] verbose = True log_dir = /var/log/cloudkitty  [oslo_messaging_rabbit] rabbit_userid = openstack rabbit_password = RABBIT_PASSWORD rabbit_hosts = RABBIT_HOST  [auth] username = cloudkitty password = CK_PASSWORD tenant = service region = RegionOne url = http://localhost:5000/v2.0  [keystone_authtoken] username = cloudkitty password = CK_PASSWORD project_name = service region = RegionOne auth_url = http://localhost:5000/v2.0 auth_plugin = password  [database] connection = mysql://cloudkitty:CK_DBPASS@localhost/cloudkitty  [keystone_fetcher] username = admin password = ADMIN_PASSWORD tenant = admin region = RegionOne url = http://localhost:5000/v2.0  [ceilometer_collector] username = cloudkitty password = CK_PASSWORD tenant = service region = RegionOne url = http://localhost:5000 </code></pre> <p>设置数据库和存储后端</p> <pre><code class="language-bash">[root@controller ~]# mysql -uroot -p000000 Welcome to the MariaDB monitor.  Commands end with ; or \g. Your MariaDB connection id is 374 Server version: 10.1.20-MariaDB MariaDB Server Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others. Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.  MariaDB [(none)]&gt; CREATE DATABASE cloudkitty; Query OK, 1 row affected (0.00 sec) MariaDB [(none)]&gt; GRANT ALL PRIVILEGES ON cloudkitty.* TO 'cloudkitty'@'localhost' IDENTIFIED BY '000000'; Query OK, 0 rows affected (0.00 sec) MariaDB [(none)]&gt; GRANT ALL PRIVILEGES ON cloudkitty.* TO 'cloudkitty'@'%' IDENTIFIED BY '000000'; Query OK, 0 rows affected (0.00 sec) </code></pre> <p>运行数据库同步脚本</p> <pre><code class="language-bash">[root@controller ~]# cloudkitty-dbsync upgrade INFO  [alembic.runtime.migration] Context impl MySQLImpl. INFO  [alembic.runtime.migration] Will assume non-transactional DDL. INFO  [alembic.runtime.migration] Running upgrade  -&gt; 464e951dc3b8, Initial migration INFO  [alembic.runtime.migration] Running upgrade 464e951dc3b8 -&gt; 2ac2217dcbd9, Added support for meta collector INFO  [alembic.runtime.migration] Running upgrade 2ac2217dcbd9 -&gt; 385e33fef139, Added priority to modules_state. INFO  [alembic.runtime.migration] Context impl MySQLImpl. INFO  [alembic.runtime.migration] Will assume non-transactional DDL. INFO  [alembic.runtime.migration] Running upgrade  -&gt; 3dd7e13527f3, Initial migration INFO  [alembic.runtime.migration] Running upgrade 3dd7e13527f3 -&gt; 4fa888fd7eda, Added threshold support. INFO  [alembic.runtime.migration] Running upgrade 4fa888fd7eda -&gt; 54cc17accf2c, Fixed constraint name. INFO  [alembic.runtime.migration] Running upgrade 54cc17accf2c -&gt; 10d2738b67df, Rename mapping table to hashmap_mappings. INFO  [alembic.runtime.migration] Running upgrade 10d2738b67df -&gt; f8c799db4aa0, Fix unnamed constraints. INFO  [alembic.runtime.migration] Running upgrade f8c799db4aa0 -&gt; c88a06b1cfce, Clean hashmap fields constraints. /usr/lib64/python2.7/site-packages/sqlalchemy/engine/default.py:507: Warning: Duplicate index `uniq_field_per_service`. This is deprecated and will be disallowed in a future release.   cursor.execute(statement, parameters) INFO  [alembic.runtime.migration] Running upgrade c88a06b1cfce -&gt; 4da82e1c11c8, Add per tenant hashmap support INFO  [alembic.runtime.migration] Context impl MySQLImpl. INFO  [alembic.runtime.migration] Will assume non-transactional DDL. INFO  [alembic.runtime.migration] Running upgrade  -&gt; 4f9efa4601c0, Initial migration.  </code></pre> <p>初始化存储后端</p> <pre><code class="language-bash">[root@controller ~]# cloudkitty-storage-init No handlers could be found for logger "cloudkitty.utils" INFO  [alembic.runtime.migration] Context impl MySQLImpl. INFO  [alembic.runtime.migration] Will assume non-transactional DDL. INFO  [alembic.runtime.migration] Running upgrade  -&gt; 17fd1b237aa3, Initial migration INFO  [alembic.runtime.migration] Running upgrade 17fd1b237aa3 -&gt; 792b438b663, added tenant informations INFO  [alembic.runtime.migration] Running upgrade 792b438b663 -&gt; 307430ab38bc, improve qty precision INFO  [alembic.runtime.migration] Running upgrade 307430ab38bc -&gt; c703a1bad612, improve_qty_digit </code></pre> <p>CloudKitty 使用 Keystone 进行身份验证，并提供<code>rating</code>服务。</p> <pre><code class="language-bash">[root@controller ~]# openstack user create --domain demo --password 000000 cloudkitty +---------------------+----------------------------------+ | Field               | Value                            | +---------------------+----------------------------------+ | domain_id           | d5db5c4ee4a14492b69408f63107d11f | | enabled             | True                             | | id                  | f1dea9309b834edba3aa4c1b8607dc16 | | name                | cloudkitty                       | | options             | {}                               | | password_expires_at | None                             | +---------------------+----------------------------------+ </code></pre> <pre><code class="language-bash">[root@controller ~]# openstack role add --project service --user cloudkitty admin </code></pre> <p>对于应由 CloudKitty处理的每个租户，将<code>rating</code>角色<code>赋予 cloudkitty ：</code></p> <pre><code class="language-bash">[root@controller ~]# openstack role create rating +-----------+----------------------------------+ | Field     | Value                            | +-----------+----------------------------------+ | domain_id | None                             | | id        | ee01d36a397b4b0ebcb579044c32a73c | | name      | rating                           | +-----------+----------------------------------+ </code></pre> <p>创建<code>rating</code>服务及其端点：</p> <pre><code class="language-bash">[root@controller ~]# openstack service create --name cloudkitty --description "OpenStack rating" rating +-------------+----------------------------------+ | Field       | Value                            | +-------------+----------------------------------+ | description | OpenStack rating                 | | enabled     | True                             | | id          | 78f3d51cf74843cd8d325b790e0c2b1c | | name        | cloudkitty                       | | type        | rating                           | +-------------+----------------------------------+ </code></pre> <pre><code class="language-bash">openstack endpoint create --region RegionOne rating public http://controller:9292 openstack endpoint create --region RegionOne rating internal http://controller:9292 openstack endpoint create --region RegionOne rating admin http://controller:9292 </code></pre> <pre><code class="language-bash">[root@controller ~]# openstack endpoint create --region RegionOne rating public http://controller:9292 +--------------+----------------------------------+ | Field        | Value                            | +--------------+----------------------------------+ | enabled      | True                             | | id           | 48b75b9d2d764b56a5bee00ff75b03b1 | | interface    | public                           | | region       | RegionOne                        | | region_id    | RegionOne                        | | service_id   | 78f3d51cf74843cd8d325b790e0c2b1c | | service_name | cloudkitty                       | | service_type | rating                           | | url          | http://controller:9292           | +--------------+----------------------------------+ [root@controller ~]# openstack endpoint create --region RegionOne rating internal http://controller:9292 +--------------+----------------------------------+ | Field        | Value                            | +--------------+----------------------------------+ | enabled      | True                             | | id           | b4f7fffa539441a68506db90b3ae89ce | | interface    | internal                         | | region       | RegionOne                        | | region_id    | RegionOne                        | | service_id   | 78f3d51cf74843cd8d325b790e0c2b1c | | service_name | cloudkitty                       | | service_type | rating                           | | url          | http://controller:9292           | +--------------+----------------------------------+ [root@controller ~]# openstack endpoint create --region RegionOne rating admin http://controller:9292 +--------------+----------------------------------+ | Field        | Value                            | +--------------+----------------------------------+ | enabled      | True                             | | id           | a607a077f119417d9e650c16dcd61f10 | | interface    | admin                            | | region       | RegionOne                        | | region_id    | RegionOne                        | | service_id   | 78f3d51cf74843cd8d325b790e0c2b1c | | service_name | cloudkitty                       | | service_type | rating                           | | url          | http://controller:9292           | +--------------+----------------------------------+ </code></pre> <h3 id="启动">启动</h3> <pre><code class="language-bash">[root@controller ~]# systemctl start cloudkitty-processor.service [root@controller ~]# cloudkitty-api -p 8889  #临时启动API No handlers could be found for logger "cloudkitty.utils" /usr/lib/python2.7/site-packages/pecan/__init__.py:122: RuntimeWarning: `static_root` is only used when `debug` is True, ignoring   RuntimeWarning ******************************************************************************** STARTING test server cloudkitty.api.app.build_wsgi_app Available at http://controller:8889/ DANGER! For testing only, do not use in production ******************************************************************************** 192.168.200.1 - - [29/Apr/2022 15:06:41] "GET / HTTP/1.1" 200 209 </code></pre> <h3 id="检索并安装-cloudkitty-的仪表板">检索并安装 CloudKitty 的仪表板</h3> <pre><code class="language-bash">git clone https://opendev.org/openstack/cloudkitty-dashboard.git  python setup.py install yum install -y wget wget -O /etc/yum.repos.d/epel.repo http://mirrors.aliyun.com/repo/epel-7.repo yum -y install python-pip PY_PACKAGES_PATH=`pip --version | cut -d' ' -f4` ln -s $PY_PACKAGES_PATH/cloudkittydashboard/enabled/_[0-9]*.py /usr/share/openstack-dashboard/openstack_dashboard/enabled/ </code></pre> <pre><code class="language-bash=">[root@controller bin]# systemctl restart httpd.service memcached.service </code></pre> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-95642.htm">中国十大宠物粮上市公司排名 卖宠物粮食的上市公司</a></p>
+                                        <p>下一个：<a href="/news/article-96395.htm">深圳领养犬（深圳领养狗狗的机构）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-81096.htm" title="猫咪3针疫苗一共多少元钱一针 猫咪3针疫苗一共多少元钱一针啊">猫咪3针疫苗一共多少元钱一针 猫咪3针疫苗一共多少元钱一针啊</a></li>
+                        <li class="py-2"><a href="/news/article-94305.htm" title="本人想领养一只泰迪（我想领养一只泰迪狗狗）">本人想领养一只泰迪（我想领养一只泰迪狗狗）</a></li>
+                        <li class="py-2"><a href="/news/article-83163.htm" title="宠物领养协议书怎么写的图片（宠物领养协议书怎么写的图片大全）">宠物领养协议书怎么写的图片（宠物领养协议书怎么写的图片大全）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-13-free-node-subscribe-links.htm" title="免费最佳VPN | 4月13日18M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点分享">免费最佳VPN | 4月13日18M/S|免费SSR/V2ray/Shadowrocket/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-1-node-share-links.htm" title="免费最佳VPN | 4月1日21.8M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享">免费最佳VPN | 4月1日21.8M/S|免费Clash/V2ray/SSR/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-82446.htm" title="linux系统改ip地址 永久生效,Linux修改IP永久生效">linux系统改ip地址 永久生效,Linux修改IP永久生效</a></li>
+                        <li class="py-2"><a href="/news/article-93369.htm" title="我们如何获得排序的MySQL输出？">我们如何获得排序的MySQL输出？</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-6-free-node-subscribe.htm" title="免费最佳VPN | 4月6日22M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点分享">免费最佳VPN | 4月6日22M/S|免费Clash/Shadowrocket/SSR/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-free-v2ray.htm" title="免费最佳VPN | 3月25日20.7M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点分享">免费最佳VPN | 3月25日20.7M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-free-high-speed-nodes.htm" title="免费最佳VPN | 3月21日20.3M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享">免费最佳VPN | 3月21日20.3M/S|免费Clash/SSR/V2ray/Shadowrocket订阅节点分享</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">48</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">59</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+
+                <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            免费最佳VPN 推荐VPN免费节点订阅官网 版权所有 Powered by WordPress
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/wow/wow.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/easing/easing.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/waypoints/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Template Javascript -->
+        <script src="/assets/website/js/frontend/v2rayclashnodes/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+</body>
+
+</html>
