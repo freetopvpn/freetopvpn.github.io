@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freetopvpn.github.io/news/article-103822.htm" />
+    <meta charset="utf-8">
+    <title>uni-app 怎么修改自定义组件样式 uniapp 覆盖 组件样式</title>
+        <meta name="description" content="前段时间说到，由于Android和ios开发的小伙伴比较忙。我被拉来开发一个App。 今天记录一下， uni-app小程序怎么修改自定义组件样式  测试了h5和App端是可以的。小程序端没有测试 如果" />
+        <link rel="icon" href="/assets/website/img/v2rayclashnodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费最佳VPN 推荐VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freetopvpn.github.io/news/article-103822.htm" />
+    <meta property="og:site_name" content="免费最佳VPN 推荐VPN免费节点订阅官网" />
+    <meta property="og:title" content="uni-app 怎么修改自定义组件样式 uniapp 覆盖 组件样式" />
+    <meta property="og:image" content="https://freetopvpn.github.io/uploads/20240602/09b36dee9871dfdcf5b9cb9a87498758.webp" />
+        <meta property="og:release_date" content="2025-04-25T07:08:14" />
+    <meta property="og:updated_time" content="2025-04-25T07:08:14" />
+        <meta property="og:description" content="前段时间说到，由于Android和ios开发的小伙伴比较忙。我被拉来开发一个App。 今天记录一下， uni-app小程序怎么修改自定义组件样式  测试了h5和App端是可以的。小程序端没有测试 如果" />
+        
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="uni-app 怎么修改自定义组件样式 uniapp 覆盖 组件样式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-22K1GNRV1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-22K1GNRV1V');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+                        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="/" class="navbar-brand p-0">
+                                        <span>免费最佳VPN</span>
+                                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                                                <a href="/" class="nav-item nav-link">首页</a>
+                                                <a href="/free-nodes/" class="nav-item nav-link">免费节点</a>
+                                                <a href="/paid-subscribe/" class="nav-item nav-link">推荐机场</a>
+                                                <a href="/news/" class="nav-item nav-link">新闻资讯</a>
+                                                <a href="/client.htm" class="nav-item nav-link">客户端</a>
+                                            </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary page-header">
+                <div class="container text-center">
+                    <h1 class="text-white animated zoomIn mb-3">uni-app 怎么修改自定义组件样式 uniapp 覆盖 组件样式</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="/">首页</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="/news/">新闻资讯</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">正文</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl">
+            <div class="container">
+                <div class="row" id="list">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="htmledit_views"> <p>前段时间说到，由于Android和ios开发的小伙伴比较忙。我被拉来开发一个App。</p> <p>今天记录一下，</p> <h2>uni-app小程序怎么修改自定义组件样式</h2> <p><img fetchpriority="high" decoding="async" alt="" height="629" src="http://img.555519.xyz/uploads/20230218/145992a4e04166977a3147a0aaedbc6e.jpg"></p> <p>测试了h5和App端是可以的。小程序端没有测试</p> <p>如果使用过vue开发项目，可以知道，当&nbsp;<code>&lt;style&gt;</code>&nbsp;标签有&nbsp;<code>scoped</code>&nbsp;属性时，它的 CSS 只作用于当前组件中的元素。</p> <p>使用之后是这样的。</p> <pre><code class="language-css">&lt;style&gt; /* 全局样式 */ &lt;/style&gt;  &lt;style scoped&gt; /* 本地样式 */ &lt;/style&gt;</code></pre> <p>但是使用&nbsp;<code>scoped</code>&nbsp;后，父组件的样式将不会渗透到子组件中。</p> <p>如果你希望&nbsp;<code>scoped</code>&nbsp;样式中的一个选择器能够作用得“更深”，例如影响子组件，你可以使用&nbsp;<code>&gt;&gt;&gt;</code>&nbsp;操作符：</p> <pre><code>&lt;style scoped&gt; .a &gt;&gt;&gt; .b { /* ... */ } &lt;/style&gt;  //会被解析成这个样子 .a[data-v-f3f3eg9] .b { /* ... */ }</code></pre> <p>有些像 Sass 之类的预处理器无法正确解析&nbsp;<code>&gt;&gt;&gt;</code>。这种情况下你可以使用&nbsp;<code>/deep/</code>&nbsp;或&nbsp;<code>::v-deep</code>&nbsp;操作符取而代之——两者都是&nbsp;<code>&gt;&gt;&gt;</code>&nbsp;的别名，同样可以正常工作。</p> <p>&nbsp;</p> <p>vue文档</p> </p></div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-103077.htm">猫咪抓后多久才安全（猫咪用跳蚤药多久安全）</a></p>
+                                        <p>下一个：<a href="/news/article-103825.htm">C#语法糖系列第一篇：聊聊 params 参数底层玩法</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-98516.htm" title="一只跳蚤一晚上能咬多少包（跳蚤咬了一般多久自愈）">一只跳蚤一晚上能咬多少包（跳蚤咬了一般多久自愈）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-free-v2ray.htm" title="免费最佳VPN | 3月25日20.7M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点分享">免费最佳VPN | 3月25日20.7M/S|免费Clash/Shadowrocket/V2ray/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-90946.htm" title="C#把EXCEL数据转换成DataTable_C#教程_">C#把EXCEL数据转换成DataTable_C#教程_</a></li>
+                        <li class="py-2"><a href="/news/article-103825.htm" title="C#语法糖系列第一篇：聊聊 params 参数底层玩法">C#语法糖系列第一篇：聊聊 params 参数底层玩法</a></li>
+                        <li class="py-2"><a href="/news/article-83889.htm" title="文本垂直居中的两种解决办法">文本垂直居中的两种解决办法</a></li>
+                        <li class="py-2"><a href="/news/article-100788.htm" title="OpenPose环境搭建的经历">OpenPose环境搭建的经历</a></li>
+                        <li class="py-2"><a href="/news/article-97852.htm" title="动物疫苗使用前的注意事项是什么呢（动物疫苗注射工作注意事项）">动物疫苗使用前的注意事项是什么呢（动物疫苗注射工作注意事项）</a></li>
+                        <li class="py-2"><a href="/news/article-86033.htm" title="字符串替换 — C语言【由特殊到一般，找规律，定公式】">字符串替换 — C语言【由特殊到一般，找规律，定公式】</a></li>
+                        <li class="py-2"><a href="/news/article-78335.htm" title="派多格宠物美容培训学校官网宿舍图片（派多格宠物美容培训怎么样）">派多格宠物美容培训学校官网宿舍图片（派多格宠物美容培训怎么样）</a></li>
+                        <li class="py-2"><a href="/news/article-101463.htm" title="动物疫苗种类及类型分类表（动物疫苗的种类和制备原理）">动物疫苗种类及类型分类表（动物疫苗的种类和制备原理）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">79</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">59</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+
+                <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            免费最佳VPN 推荐VPN免费节点订阅官网 版权所有 Powered by WordPress
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/wow/wow.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/easing/easing.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/waypoints/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Template Javascript -->
+        <script src="/assets/website/js/frontend/v2rayclashnodes/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+</body>
+
+</html>

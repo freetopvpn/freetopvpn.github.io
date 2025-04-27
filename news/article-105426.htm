@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freetopvpn.github.io/news/article-105426.htm" />
+    <meta charset="utf-8">
+    <title>virtualenv介绍及基本使用</title>
+        <meta name="description" content="1.virtualenv介绍   2.安装virtualenv   3.virtualenv运行使用   4.virtualenv其他命令   综合    1.virtualenv介绍  在pytho" />
+        <link rel="icon" href="/assets/website/img/v2rayclashnodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费最佳VPN 推荐VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freetopvpn.github.io/news/article-105426.htm" />
+    <meta property="og:site_name" content="免费最佳VPN 推荐VPN免费节点订阅官网" />
+    <meta property="og:title" content="virtualenv介绍及基本使用" />
+    <meta property="og:image" content="https://freetopvpn.github.io/uploads/20240602/8e0fcdf55c0f8e9ca8fb37f2b1d10ba5.webp" />
+        <meta property="og:release_date" content="2025-04-27T08:27:49" />
+    <meta property="og:updated_time" content="2025-04-27T08:27:49" />
+        <meta property="og:description" content="1.virtualenv介绍   2.安装virtualenv   3.virtualenv运行使用   4.virtualenv其他命令   综合    1.virtualenv介绍  在pytho" />
+        
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="virtualenv介绍及基本使用">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-22K1GNRV1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-22K1GNRV1V');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+                        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="/" class="navbar-brand p-0">
+                                        <span>免费最佳VPN</span>
+                                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                                                <a href="/" class="nav-item nav-link">首页</a>
+                                                <a href="/free-nodes/" class="nav-item nav-link">免费节点</a>
+                                                <a href="/paid-subscribe/" class="nav-item nav-link">推荐机场</a>
+                                                <a href="/news/" class="nav-item nav-link">新闻资讯</a>
+                                                <a href="/client.htm" class="nav-item nav-link">客户端</a>
+                                            </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary page-header">
+                <div class="container text-center">
+                    <h1 class="text-white animated zoomIn mb-3">virtualenv介绍及基本使用</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="/">首页</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="/news/">新闻资讯</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">正文</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl">
+            <div class="container">
+                <div class="row" id="list">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> </h1> <hr/> <blockquote> <ul> <li> <p>1.virtualenv介绍</p> </li> <li> <p>2.安装virtualenv</p> </li> <li> <p>3.virtualenv运行使用</p> </li> <li> <p>4.virtualenv其他命令</p> </li> <li> <p>综合</p> </li> </ul> </blockquote> <h2 id="1virtualenv介绍">1.virtualenv介绍</h2> <hr/> <p>在python开发中，我们可能会遇到一种情况，就是当前的项目依赖的是某一个版本，但是另一个项目依赖的是另一个版本，这样就会造成依赖冲突，而virtualenv就是解决这种情况的，virtualenv通过创建一个虚拟化的python运行环境，将我们所需的依赖安装进去的，不同项目之间相互不干扰，如下所示。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/405dea049cfc1f3ce9ca502193e7e15d.jpg" alt="virtualenv介绍及基本使用"></p> <h2 id="2安装virtualenv">2.安装virtualenv</h2> <hr/> <p>安装virtualenv比较简单，无论是在linux系统上还是windows上都可以通过<strong>pip</strong>来进行安装，如下：</p> <pre class="prettyprint"><code class="hljs cmake">pip<span class="hljs-keyword">install</span> virtualenv</code></pre> <p>如果安装不成功也可以下载virtualenv源码package，通过执行setup.py来安装virtualenv。同时因为python2和python3的不同，因此也有了两种pip和pip3两种python包安装工具，而两种工具安装的virtualenv也是不相同的，py2安装的virtualenv虚拟化出来的python运行环境是python2的，py3安装的virtualenv默认虚拟化环境则是python3的。</p> <h2 id="3virtualenv运行使用">3.virtualenv运行使用</h2> <hr/> <h3 id="31-创建虚拟化环境">3.1 创建虚拟化环境</h3> <hr/> <p>使用pycharm来作为本示例的编辑器，选择python2.7工作环境，新建工程<strong>virtualenvDemo</strong>,在控制台中输入命令：</p> <pre class="prettyprint"><code class="hljs">virtualenv venv</code></pre> <p>这时候便会在当前的项目中创建venv文件夹，为当前项目的虚拟python运行环境，如下：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/c4a6c95381ea72ca0a8c9a5dbc972797.jpg" alt="virtualenv介绍及基本使用"></p> <p>我本机此时默认的python环境为python2.7，那么此时创建的虚拟环境就是以python2.7创建的虚拟化环境，如果需要选择一个python解释器来创建虚拟化环境，命令则为：</p> <pre class="prettyprint"><code class="hljs lasso">virtualenv<span class="hljs-attribute">-p</span> /usr/bin/python2<span class="hljs-number">.7</span> venv</code></pre> <p>此时还需将当前工程的interpreter改为当前的虚拟环境，要不然会不起作用，这个不再详述。</p> <h3 id="32-启用">3.2 启用</h3> <hr/> <p>激活虚拟化环境的命令为：</p> <pre class="prettyprint"><code class="hljs bash"><span class="hljs-built_in">source</span> venv/bin/activate</code></pre> <p>激活后，在控制台会有一个带有(venv)的标志，如下：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220819/85704bf5af12185b5cd9359c69055a8e.jpg" alt="virtualenv介绍及基本使用"></p> <h3 id="33安装依赖">3.3安装依赖</h3> <hr/> <p>在以上完成之后就可以通过命令pip install 来安装python包了，这里安装python包就不需要root权限了，直接就可以安装十分方便。在venv的环境中，使用pip安装的包都不会再是全局性的包，只会在当前的虚拟环境中起作用，避免了污染系统环境。</p> <h3 id="34-退出当前系统环境">3.4 退出当前系统环境</h3> <hr/> <p>在控制台中输入命令deactivate后，就会推出当前的venv虚拟化环境。</p> <h2 id="4virtualenv其他命令">4.virtualenv其他命令</h2> <hr/> <p>virtualenv各种其他命令如下：</p> <p>“`<br /> 用法:</p> <p>$ virtualenv [OPTIONS] DEST_DIR<br /> 选项:<br /> –version<br /> 显示当前版本号。<br /> -h, –help<br /> 显示帮助信息。<br /> -v, –verbose<br /> 显示详细信息。<br /> -q, –quiet<br /> 不显示详细信息。<br /> -p PYTHON_EXE, –python=PYTHON_EXE<br /> 指定所用的python解析器的版本，比如 –python=python2.5 就使用2.5版本的解析器创建新的隔离环境。 默认使用的是当前系统安装(/usr/bin/python)的python解析器<br /> –clear<br /> 清空非root用户的安装，并重头开始创建隔离环境。<br /> –no-site-packages<br /> 令隔离环境不能访问系统全局的site-packages目录。<br /> –system-site-packages<br /> 令隔离环境可以访问系统全局的site-packages目录。<br /> –unzip-setuptools<br /> 安装时解压Setuptools或Distribute<br /> –relocatable<br /> 重定位某个已存在的隔离环境。使用该选项将修正脚本并令所有.pth文件使用相当路径。<br /> –distribute<br /> 使用Distribute代替Setuptools，也可设置环境变量VIRTUALENV_DISTRIBUTE达到同样效要。<br /> –extra-search-dir=SEARCH_DIRS<br /> 用于查找setuptools/distribute/pip发布包的目录。可以添加任意数量的–extra-search-dir路径。<br /> –never-download<br /> 禁止从网上下载任何数据。此时，如果在本地搜索发布包失败，virtualenv就会报错。<br /> –prompt==PROMPT<br /> 定义隔离环境的命令行前缀。<br /> “`</p> <h2 id="5综上">5.综上</h2> <hr/> <ul> <li> <p>virtualenv就是一个搭建虚拟化的python环境，便于不同的项目在同一台机器上开发运行。</p> </li> <li> <p>virtualenv更多的还是适用于本地开发不同的项目，但是在生产环境中还是使用docker给不同的项目创建不同的容器，各自分开运行为好，不宜放在一个单独的物理机中运行。</p> </li> </ul> </div> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-104696.htm">动物注射疫苗的流程图片高清（动物疫苗注射方法）</a></p>
+                                        <p>下一个：<a href="/news/article-105427.htm">领养好还是宠物店买好（领养的狗和宠物店的区别在哪里）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-103825.htm" title="C#语法糖系列第一篇：聊聊 params 参数底层玩法">C#语法糖系列第一篇：聊聊 params 参数底层玩法</a></li>
+                        <li class="py-2"><a href="/news/article-96394.htm" title="【openstack】cloudkitty组件，入门级安装（快速）_在线工具">【openstack】cloudkitty组件，入门级安装（快速）_在线工具</a></li>
+                        <li class="py-2"><a href="/news/article-92618.htm" title="利用策略模式+单例模式+反射 替换if-else">利用策略模式+单例模式+反射 替换if-else</a></li>
+                        <li class="py-2"><a href="/news/article-94303.htm" title="vue如何根据条件判断按钮是否可以点击_vue.js">vue如何根据条件判断按钮是否可以点击_vue.js</a></li>
+                        <li class="py-2"><a href="/news/article-90947.htm" title="宠物领养证如何办理手续和流程视频（宠物领养中心领养要钱吗）">宠物领养证如何办理手续和流程视频（宠物领养中心领养要钱吗）</a></li>
+                        <li class="py-2"><a href="/news/article-97849.htm" title="妙三多猫疫苗好吗（妙三多猫疫苗都预防哪些疾病）">妙三多猫疫苗好吗（妙三多猫疫苗都预防哪些疾病）</a></li>
+                        <li class="py-2"><a href="/news/article-73587.htm" title="宠物粮食加工厂设备哪的好点呢知乎 宠物粮食加工厂设备哪的好点呢知乎">宠物粮食加工厂设备哪的好点呢知乎 宠物粮食加工厂设备哪的好点呢知乎</a></li>
+                        <li class="py-2"><a href="/news/article-100095.htm" title="扬州宠园宠物医院（扬州宠园宠物医院怎么样）">扬州宠园宠物医院（扬州宠园宠物医院怎么样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-16-free-node-subscribe-links.htm" title="免费最佳VPN | 3月16日18.7M/S|免费Clash/SSR/Shadowrocket/V2ray订阅节点分享">免费最佳VPN | 3月16日18.7M/S|免费Clash/SSR/Shadowrocket/V2ray订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-88182.htm" title="瑞鹏宠物医院官网招聘信息（瑞鹏宠物医院官网招聘信息最新）">瑞鹏宠物医院官网招聘信息（瑞鹏宠物医院官网招聘信息最新）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">79</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">59</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+
+                <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            免费最佳VPN 推荐VPN免费节点订阅官网 版权所有 Powered by WordPress
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/wow/wow.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/easing/easing.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/waypoints/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Template Javascript -->
+        <script src="/assets/website/js/frontend/v2rayclashnodes/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+</body>
+
+</html>
