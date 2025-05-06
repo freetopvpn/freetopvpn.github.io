@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freetopvpn.github.io/news/article-109696.htm" />
+    <meta charset="utf-8">
+    <title>AgileConfig 1.6.0 发布 &#8211; 支持服务注册与发现</title>
+        <meta name="description" content="大家好，好久没有输出博文了，一是因为比较忙，另外一个原因是最近主要的精力是在给 AgileConfig 添加一个新的功能：服务注册与发现。 先说说为什么会添加这个功能。我自己的项目是用 Consul " />
+        <link rel="icon" href="/assets/website/img/v2rayclashnodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费最佳VPN 推荐VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freetopvpn.github.io/news/article-109696.htm" />
+    <meta property="og:site_name" content="免费最佳VPN 推荐VPN免费节点订阅官网" />
+    <meta property="og:title" content="AgileConfig 1.6.0 发布 &#8211; 支持服务注册与发现" />
+    <meta property="og:image" content="https://freetopvpn.github.io/uploads/20240602/524708abf40352a4b74618199843757f.webp" />
+        <meta property="og:release_date" content="2025-05-02T09:23:13" />
+    <meta property="og:updated_time" content="2025-05-02T09:23:13" />
+        <meta property="og:description" content="大家好，好久没有输出博文了，一是因为比较忙，另外一个原因是最近主要的精力是在给 AgileConfig 添加一个新的功能：服务注册与发现。 先说说为什么会添加这个功能。我自己的项目是用 Consul " />
+        
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="AgileConfig 1.6.0 发布 &#8211; 支持服务注册与发现">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-22K1GNRV1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-22K1GNRV1V');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+                        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="/" class="navbar-brand p-0">
+                                        <span>免费最佳VPN</span>
+                                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                                                <a href="/" class="nav-item nav-link">首页</a>
+                                                <a href="/free-nodes/" class="nav-item nav-link">免费节点</a>
+                                                <a href="/paid-subscribe/" class="nav-item nav-link">推荐机场</a>
+                                                <a href="/news/" class="nav-item nav-link">新闻资讯</a>
+                                                <a href="/client.htm" class="nav-item nav-link">客户端</a>
+                                            </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary page-header">
+                <div class="container text-center">
+                    <h1 class="text-white animated zoomIn mb-3">AgileConfig 1.6.0 发布 &#8211; 支持服务注册与发现</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="/">首页</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="/news/">新闻资讯</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">正文</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl">
+            <div class="container">
+                <div class="row" id="list">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				<p>大家好，好久没有输出博文了，一是因为比较忙，另外一个原因是最近主要的精力是在给 AgileConfig 添加一个新的功能：服务注册与发现。<br /> 先说说为什么会添加这个功能。我自己的项目是用 Consul 来做为服务注册发现组件的。自从我上线了 AgileConfig 做为配置中心后，我就很少去 Consul 观察服务的在线状态了，因为 AgileConfig 客户端列表已经在一定程度上能代表服务的状态了。服务注册发现与配置中心其实本质上都是解决了一类问题，那就是配置的动态化，所以大家会看到业界著名的组件很多都是同时实现这2个功能的，如 Consul，Nacos 等。所以我想干脆把这个功能给加上吧，这样可以省去部署一个组件。<br /> 当然也有同学说我不务正业，不去好好搞配置中心去搞什么服务注册发现。但是我还是做了。。。<br /> 不过大家放心 AgileConfig 的主业还是在配置中心上，服务注册发现只是附赠的小菜，可以用也可以不用，决定权完全在你。在实现上我也是对两个功能是完全解耦的。也就是说这2个功能都是互不影响独立运行的。唯一有交集的一个地方是，如果配置中心的客户端的 websocket 通道建立成功的时候，服务的心跳会借用这个通道。<br /> ✨✨✨Github地址：https://github.com/dotnetcore/AgileConfig  开源不易，欢迎star✨✨✨<br /> ✨✨✨Gitee地址：https://gitee.com/kklldog/AgileConfig ✨✨✨</p> <h2 id="什么是服务注册与发现">什么是服务注册与发现</h2> <p>首先先让我们回顾下服务注册发现的概念。<br /> 在实施微服务之后，我们的调用都变成了服务间的调用。服务间调用需要知道IP、端口等信息。再没有微服务之前，我们的调用信息一般都是写死在调用方的配置文件里（当然这话不绝对，有些公司会把这些信息写到数据库等公共的地方，以方便维护）。又由于业务的复杂，每个服务可能依赖N个其他服务，如果某个服务的IP，端口等信息发生变更，那么所有依赖该服务的服务的配置文件都要去修改，这样显然太麻烦了。有些服务为了负载是有个多个实例的，而且可能是随时会调整实例的数量。如果每次调整实例数量都要去修改其他服务的配置并重启那太麻烦了。<br /> 为了解决这个问题，业界就有了服务注册发现组件。<br /> 假设我们有服务A需要调用服务B，并且有服务注册发现组件R。整个大致流程将变成大概3部：<br /> 服务B启动向服务R注册自己的信息<br /> 服务A从服务R拉取服务B的信息<br /> 服务A调用服务B<br /> 有了服务注册发现组件之后，当修改A服务信息的时候再也不用去修改其他相关服务了。<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/50ac317c4db0d4946956c0a978e198e3.jpg" alt="AgileConfig 1.6.0 发布 - 支持服务注册与发现"><br /> 参考我的另外一篇：.Net Core with 微服务 - Consul 注册中心</p> <h2 id="使用服务注册与发现">使用服务注册与发现</h2> <p>使用服务注册与发现功能需要更新服务端与客户端至 1.6.0 及以上版本。</p> <h3 id="启动服务端">启动服务端</h3> <p>服务端更新至 latest 镜像或 v-1.6.0 以上的镜像。<br /> 使用 docker 运行服务端实例：</p> <pre><code>sudo docker run \ --name agile_config \ -e TZ=Asia/Shanghai \ -e adminConsole=true \ -e db:provider=sqlite \ -e db:conn="Data Source=agile_config.db" \ -p 5000:5000 \ #-v /your_host_dir:/app/db \ -d kklldog/agile_config:latest</code></pre> <p>基本的使用没有太大的变化，只是在界面上添加了服务的相关管理界面，这里不在赘述。<br /> 相关教程:.Net Core &amp; Agile Config配置中心</p> <h3 id="使用客户端">使用客户端</h3> <p>客户端需要从 nuget 上安装 1.6.0 版本以上的 client 包。</p> <pre><code>Install-Package AgileConfig.Client -Version 1.6.0</code></pre> <p>新版的 client 简化了使用方式，以下以 .net6 为示例：<br /> 调用 UseAgileConfig 扩展方法即可注入 AgileConfig client .</p> <pre><code> var builder = WebApplication.CreateBuilder(args);  //use agileconfig client builder.Host.UseAgileConfig();  ...</code></pre> <p>在 appsettings.json 添加配置信息：</p> <pre><code> "AgileConfig": {     "appId": "test_app",     "secret": "test_app",     "nodes": "http://agileconfig_server.xbaby.xyz/",     "name": "client123",     "tag": "tag123",      "serviceRegister": { //服务注册信息，如果不配置该节点，则不会启动任何跟服务注册相关的服务 可选       "serviceId": "net6", //服务id，全局唯一，用来唯一标示某个服务       "serviceName": "net6MVC服务测试", //服务名，可以重复，某个服务多实例部署的时候这个serviceName就可以重复       "ip": "127.0.0.1", //服务的ip 可选       "port": 5005, //服务的端口 可选   }</code></pre> <p>其中 appId , secret 等配置同原来配置中心的使用方式没有任何改变。<br /><code>serviceRegister</code> 节点描述的是服务注册信息（如果删除这个节点那么服务注册功能就不会启动）：</p> <ul> <li>serviceId<br /> 服务id，全局唯一，用来唯一标示某个服务</li> <li>serviceName<br /> 服务名，可以重复，某个服务多实例部署的时候这个serviceName就可以重复</li> <li>ip<br /> 服务的ip 可选</li> <li>port<br /> 服务的端口 可选</li> <li>metaData<br /> 一个字符串数组，可以携带一些服务的相关信息，如版本等 可选</li> <li>alarmUrl<br /> 告警地址 可选。<br /> 如果某个服务出现异常情况，如一段时间内没有心跳，那么服务端会往这个地址 POST 一个请求并且携带服务相关信息，用户可以自己去实现提醒功能，比如发短信，发邮件等：</li> </ul> <pre><code>{     "serviceId":"0001",     "serviceName":"xxxx",     "time":"2022-01-01T12:00:000",     "status":"Unhealty",     "message": "服务不健康" }</code></pre> <ul> <li>heartbeat:mode<br /> 指定心跳的模式，server/client 。server代表服务端主动检测，client代表客户端主动上报。不填默认client模式 可选</li> <li>heartbeat:interval<br /> 心跳的间隔，默认时间30s 可选</li> <li>heartbeat:url<br /> 心跳模式为 server 的时候需要填写健康检测地址，如果是httpstatus为200段则判定存活，其它都视为失败 可选</li> </ul> <h3 id="服务的注册">服务的注册</h3> <p>当配置好客户端后，启动对应的应用程序，服务信息会自动注册到服务端并且开始心跳。如果服务正确注册到服务端，控制台的服务管理界面可以查看：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/1826b418955562964c731b1f80a1a4c4.jpg" alt="AgileConfig 1.6.0 发布 - 支持服务注册与发现"></p> <h3 id="服务发现">服务发现</h3> <p>现在服务已经注册上去了，那么怎么才能拿到注册中心所有的服务呢？同样非常简单，在程序内只要注入<code>IDiscoveryService</code>接口就可以通过它拿到所有的注册的服务。</p> <pre><code>public interface IDiscoveryService     {         string DataVersion { get; }         List&lt;ServiceInfo&gt; UnHealthyServices { get; }         List&lt;ServiceInfo&gt; HealthyServices { get; }         List&lt;ServiceInfo&gt; Services { get; }         Task RefreshAsync();     }</code></pre> <p>除了接口内置的方法，还有几个扩展方法方便用户使用，比如随机一个服务：</p> <pre><code>    public static class DiscoveryServiceExtension     {         public static IEnumerable&lt;ServiceInfo&gt; GetByServiceName(this IDiscoveryService ds, string serviceName)         {             return ds.Services.GetByServiceName(serviceName);         }          public static ServiceInfo GetByServiceId(this IDiscoveryService ds, string serviceId)         {             return ds.Services.GetByServiceId(serviceId);         }          public static ServiceInfo RandomOne(this IDiscoveryService ds, string serviceName)         {             return ds.Services.RandomOne(serviceName);         }     }</code></pre> <p>至此服务的注册与发现就已经完成了。</p> <h2 id="一些重要的信息">一些重要的信息</h2> <p>以上就是服务注册发现的简单使用，但是还有一些比较重要的信息希望大家在使用之前能够了解，这样有利于更好的使用以及出现问题的时候定位问题。</p> <h3 id="高可用">高可用</h3> <p>同 AgileConfig 的配置中心功能一样，服务注册后最后都是写到了数据库里。AgileConfig 的服务端可以部署多个来防止单点故障，同时可以分担压力。所以高可用的最佳实践就是部署 2 个以上的服务端节点，然后数据库做高可用方案。这样足够应付大多数要求不是特别高的场景。</p> <h3 id="强一致性">强一致性</h3> <p>同上 AgileConfig 通过数据库保证多个节点部署的时候的一致性问题。</p> <h3 id="服务的健康检测">服务的健康检测</h3> <p>服务的健康检测一般有2种方案：</p> <ol> <li>服务端主动询问</li> <li>客户端主动心跳<br /> AgileConfig 同时支持以上2个方案。AgileConfig client 默认实现了主动心跳。AgileConfig client 的主动心跳有2个渠道：</li> </ol> <ul> <li>websocket<br /> 长连接，如果AgileConfig client做为配置中心客户端是正常工作的，那么心跳会走websocket通道</li> <li>http<br /> 如果 websocket 不可用，那么会直接发起 http 请求做为心跳。<br /> 但是对于一些应用主动的心跳并不能代表服务真的是可以用的，因为心跳从服务已启动就会开始，但是某些接口可能还没真正的做好准备被调用。那么这个时候就可以选择服务端主动询问（heartbeat:mode=server）对应的检测接口来确定服务是否真的可用。<br /> AgileConfig 其实还实现了第三种方式：</li> </ul> <ol start="3"> <li>不检测<br /> 如果一个服务你确定它会永远在线，或者是没办法集成 AgileConfig client 的 sdk ，那么你可以标记它为不检测，这样它会一直是健康状态。</li> </ol> <h3 id="服务发现是如何即时更新的">服务发现是如何即时更新的</h3> <p>我们的 client 在启动后会拉取一次全量的服务列表。但是服务是会不断的上线，下线的，所以服务状态的更新是需要通知客户端的，然后客户端去拉取新的服务列表。AgileConfig 同样有2个策略来保证服务列表的即时刷新：</p> <ol> <li>当服务状态变化的时候，服务端通过 websocket 即时通知所有的 client 主动刷新配置列表</li> <li>如果服务端的主动通知由于网络等原因失效的时候，client 会在每次心跳的时候比较本地服务列表 md5 版本跟服务端的列表的 md5 信息，如果不一致，那么 client 会主动拉取一次新的服务列表。</li> </ol> <h3 id="关闭服务注册与发现">关闭服务注册与发现</h3> <p>删除<code>serviceRegister</code> 配置节点或不要配置任何信息。</p> <h2 id="最后">最后</h2> <p>✨✨✨Github地址：https://github.com/dotnetcore/AgileConfig  开源不易，欢迎star✨✨✨<br /> ✨✨✨Gitee地址：https://gitee.com/kklldog/AgileConfig ✨✨✨</p> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-109692.htm">在TypeScript项目中进行BDD测试</a></p>
+                                        <p>下一个：<a href="/news/article-110542.htm">SpringMVC-@RequestMapping注解</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-101463.htm" title="动物疫苗种类及类型分类表（动物疫苗的种类和制备原理）">动物疫苗种类及类型分类表（动物疫苗的种类和制备原理）</a></li>
+                        <li class="py-2"><a href="/news/article-98515.htm" title="孕妇让猫抓破了流血了（孕妇让猫抓破了流了一点点血）">孕妇让猫抓破了流血了（孕妇让猫抓破了流了一点点血）</a></li>
+                        <li class="py-2"><a href="/news/article-109692.htm" title="在TypeScript项目中进行BDD测试">在TypeScript项目中进行BDD测试</a></li>
+                        <li class="py-2"><a href="/news/article-90946.htm" title="C#把EXCEL数据转换成DataTable_C#教程_">C#把EXCEL数据转换成DataTable_C#教程_</a></li>
+                        <li class="py-2"><a href="/news/article-109696.htm" title="AgileConfig 1.6.0 发布 &#8211; 支持服务注册与发现">AgileConfig 1.6.0 发布 &#8211; 支持服务注册与发现</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-5-2-free-node-subscribe.htm" title="免费最佳VPN | 5月2日21.7M/S|免费V2ray/SSR/Clash/Shadowrocket订阅节点分享">免费最佳VPN | 5月2日21.7M/S|免费V2ray/SSR/Clash/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-90403.htm" title="人用针剂跟畜用针剂一样吗图片（人用注射器和兽用注射器有什么区别）">人用针剂跟畜用针剂一样吗图片（人用注射器和兽用注射器有什么区别）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-5-6-node-share-links.htm" title="免费最佳VPN | 5月6日20M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享">免费最佳VPN | 5月6日20M/S|免费Shadowrocket/SSR/V2ray/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-88182.htm" title="瑞鹏宠物医院官网招聘信息（瑞鹏宠物医院官网招聘信息最新）">瑞鹏宠物医院官网招聘信息（瑞鹏宠物医院官网招聘信息最新）</a></li>
+                        <li class="py-2"><a href="/news/article-107235.htm" title="Halo 开源项目学习评论与点赞">Halo 开源项目学习评论与点赞</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+
+                <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            免费最佳VPN 推荐VPN免费节点订阅官网 版权所有 Powered by WordPress
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/wow/wow.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/easing/easing.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/waypoints/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Template Javascript -->
+        <script src="/assets/website/js/frontend/v2rayclashnodes/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+</body>
+
+</html>

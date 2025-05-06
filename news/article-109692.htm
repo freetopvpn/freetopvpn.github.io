@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html xml:lang="zh-CN" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freetopvpn.github.io/news/article-109692.htm" />
+    <meta charset="utf-8">
+    <title>在TypeScript项目中进行BDD测试</title>
+        <meta name="description" content="什么是BDD? BDD(Behavior-Driven Design)是软件团队的一种工作方式，通过以下方式缩小业务人员和技术人员之间的差距：  鼓励跨角色协作，建立对待解决问题的共同理解 以快速、小" />
+        <link rel="icon" href="/assets/website/img/v2rayclashnodes/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="免费最佳VPN 推荐VPN免费节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freetopvpn.github.io/news/article-109692.htm" />
+    <meta property="og:site_name" content="免费最佳VPN 推荐VPN免费节点订阅官网" />
+    <meta property="og:title" content="在TypeScript项目中进行BDD测试" />
+    <meta property="og:image" content="https://freetopvpn.github.io/uploads/20240602/9b1bbda239d2da6072d9b4d98b19c73c.webp" />
+        <meta property="og:release_date" content="2025-05-02T09:23:13" />
+    <meta property="og:updated_time" content="2025-05-02T09:23:13" />
+        <meta property="og:description" content="什么是BDD? BDD(Behavior-Driven Design)是软件团队的一种工作方式，通过以下方式缩小业务人员和技术人员之间的差距：  鼓励跨角色协作，建立对待解决问题的共同理解 以快速、小" />
+        
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="在TypeScript项目中进行BDD测试">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@700;800&display=swap" rel="stylesheet">
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Libraries Stylesheet -->
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/bootstrap.min.css" rel="stylesheet">
+    <!-- Template Stylesheet -->
+    <link href="/assets/website/css/v2rayclashnodes/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-22K1GNRV1V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-22K1GNRV1V');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+                        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="/" class="navbar-brand p-0">
+                                        <span>免费最佳VPN</span>
+                                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                                                <a href="/" class="nav-item nav-link">首页</a>
+                                                <a href="/free-nodes/" class="nav-item nav-link">免费节点</a>
+                                                <a href="/paid-subscribe/" class="nav-item nav-link">推荐机场</a>
+                                                <a href="/news/" class="nav-item nav-link">新闻资讯</a>
+                                                <a href="/client.htm" class="nav-item nav-link">客户端</a>
+                                            </div>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary page-header">
+                <div class="container text-center">
+                    <h1 class="text-white animated zoomIn mb-3">在TypeScript项目中进行BDD测试</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item"><a class="text-white" href="/">首页</a></li>
+                            <li class="breadcrumb-item"><a class="text-white" href="/news/">新闻资讯</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">正文</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl">
+            <div class="container">
+                <div class="row" id="list">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                      				  				  				</h1> <h2 id="什么是bdd">什么是BDD?</h2> <p>BDD(Behavior-Driven Design)是软件团队的一种工作方式，通过以下方式缩小业务人员和技术人员之间的差距：</p> <ul> <li>鼓励跨角色协作，建立对待解决问题的共同理解</li> <li>以快速、小迭代的方式工作，以增加反馈和价值流</li> <li>生成系统文档，自动对照系统行为进行检查</li> </ul> <p>我们通过将协作工作的重点放在具体的、真实的例子上来实现这一点，这些例子说明了我们希望系统如何运行。我们用这些例子来指导我们在持续合作的过程中从概念到实施。</p> <h2 id="gherkin语法">Gherkin语法</h2> <p>BDD特性(Feature)描述采用Gherkin语法。Gherkin使用一组特殊的关键字为可执行规范提供结构和意义。每个关键词都被翻译成多种语言；在本参考资料中，我们将使用英语。</p> <p>Cucumber是流行的BDD测试框架，支持各种平台，其文档中的大多数行都以一个关键字开头。<br /> 注释仅允许出现在新行的开头，即要素文件中的任何位置。它们以零个或多个空格开头，后跟散列符号（#）和一些文本。(Cucumber目前不支持区块注释。)</p> <p>空格或制表符可用于缩进。建议的缩进级别为两个空格。下面是一个例子：</p> <pre><code class="language-Yaml">Feature: Guess the word    # The first example has two steps   Scenario: Maker starts a game     When the Maker starts a game     Then the Maker waits for a Breaker to join    # The second example has three steps   Scenario: Breaker joins a game     Given the Maker has started a game with the word "silky"     When the Breaker joins the Maker's game     Then the Breaker must guess a word with 5 characters</code></pre> <p>Gherkin语法具体可以参考Gherkin Reference - Cucumber Documentation</p> <h2 id="给typescript项目配置bdd测试框架cucumberjs">给TypeScript项目配置BDD测试框架Cucumber.js</h2> <ul> <li> <p>通过命令<code>yarn add -D @cucumber/cucumber chai</code> 安装BDD测试框架Cucumber.js和断言(Assert)框架chai。</p> </li> <li> <p>创建目录features，在目录下创建文件bank-account.feature，内容如下：</p> <pre><code class="language-Yaml"># features/bank-account.feature Feature: Bank Account    Scenario: Stores money     Given A bank account with starting balance of $100     When $100 is deposited     Then The bank account balance should be $200</code></pre> <p>此文档描述了存款场景，银行存款账户有100美金，存入100美金，则账户应该有200美金。</p> </li> <li> <p>创建step-definitions\bank-account.steps.ts</p> <pre><code class="language-TypeScript">const { Given, Then, When} = require( '@cucumber/cucumber'); const { assert } = require( 'chai');  let accountBalance = 0;  Given('A bank account with starting balance of ${int}', function(amount) {     accountBalance = amount; });  When('${int} is deposited', function (amount) {     accountBalance = Number(accountBalance) + Number(amount); });  Then('The bank account balance should be ${int}', function(expectedAmount) {     assert.equal(accountBalance, expectedAmount); });</code></pre> <p>我们需要创建与之对应的测试代码，代码将通过类型与特性文件中输入和输出验证进行映射，其中Given对应的方法将获得100美金初始账户金额的映射，传给accountBalance。在When对应的方法中，amount测试会获得存入100美金的金额映射。最后，在Then对应的方法中expectedAmount会映射到200美金，用来验证最后是否与accountBalance相等，如果相等断言正常返回，否则BDD判断测试Case失败。</p> </li> <li> <p>我们可以通过命令<code>yarn cucumber-js features\**\*.feature -r step-definitions\**\*.js</code>运行测试。</p> </li> <li> <p>要想完成自动化配置，可以在工程根目录下创建文件cucumber.js，内容如下：</p> <pre><code class="language-JavaScript">// cucumber.js let common = [     'features/**/*.feature', // Specify our feature files     '--require step-definitions/**/*.js', // Load step definitions     '--format progress-bar', // Load custom formatter ].join(' '); module.exports = {     default: common };</code></pre> </li> <li> <p>再次执行命令<code>yarn cucumber-js</code>，通过cucumber.js文件中的配置项，会自动找到feature文件和步骤定义脚本文件，完成BDD测试工作。</p> </li> </ul> <p>参考：</p> <ul> <li>BDD Testing &amp; Collaboration Tools for Teams | Cucumber</li> </ul> 			                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-108843.htm">叫猫过来的手势视频（叫猫过来怎么说）</a></p>
+                                        <p>下一个：<a href="/news/article-109696.htm">AgileConfig 1.6.0 发布 &#8211; 支持服务注册与发现</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-92619.htm" title="宠物粮食利润大吗知乎文章 宠物粮食利润大吗知乎文章">宠物粮食利润大吗知乎文章 宠物粮食利润大吗知乎文章</a></li>
+                        <li class="py-2"><a href="/news/article-108842.htm" title="java初始时间_java日期时间详解">java初始时间_java日期时间详解</a></li>
+                        <li class="py-2"><a href="/news/article-86033.htm" title="字符串替换 — C语言【由特殊到一般，找规律，定公式】">字符串替换 — C语言【由特殊到一般，找规律，定公式】</a></li>
+                        <li class="py-2"><a href="/news/article-100095.htm" title="扬州宠园宠物医院（扬州宠园宠物医院怎么样）">扬州宠园宠物医院（扬州宠园宠物医院怎么样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-4-free-subscribe-node.htm" title="免费最佳VPN | 4月4日23M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享">免费最佳VPN | 4月4日23M/S|免费Shadowrocket/V2ray/SSR/Clash订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-5-1-free-v2ray.htm" title="免费最佳VPN | 5月1日22.2M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点分享">免费最佳VPN | 5月1日22.2M/S|免费Shadowrocket/Clash/V2ray/SSR订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-91902.htm" title="Redis缓存过期策略">Redis缓存过期策略</a></li>
+                        <li class="py-2"><a href="/news/article-108013.htm" title="瑞鹏宠物医院在线咨询免费医疗（瑞鹏宠物医院在哪些城市有）">瑞鹏宠物医院在线咨询免费医疗（瑞鹏宠物医院在哪些城市有）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-20-free-node-subscribe.htm" title="免费最佳VPN | 4月20日21.3M/S|免费V2ray/SSR/Clash/Shadowrocket订阅节点分享">免费最佳VPN | 4月20日21.3M/S|免费V2ray/SSR/Clash/Shadowrocket订阅节点分享</a></li>
+                        <li class="py-2"><a href="/news/article-103077.htm" title="猫咪抓后多久才安全（猫咪用跳蚤药多久安全）">猫咪抓后多久才安全（猫咪用跳蚤药多久安全）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">14</span> <a href="/date/2025-05/" title="2025-05 归档">2025-05</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">89</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+        
+
+                <!-- Footer Start -->
+        <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            免费最佳VPN 推荐VPN免费节点订阅官网 版权所有 Powered by WordPress
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="#">Home</a>
+                                <a href="#">Cookies</a>
+                                <a href="#">Help</a>
+                                <a href="#">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/wow/wow.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/easing/easing.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/waypoints/waypoints.min.js"></script>
+        <script src="/assets/website/js/frontend/v2rayclashnodes/lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Template Javascript -->
+        <script src="/assets/website/js/frontend/v2rayclashnodes/main.js"></script>
+        <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+        <script src="/assets/website/js/frontend/G.js"></script>
+    </div>
+</body>
+
+</html>
