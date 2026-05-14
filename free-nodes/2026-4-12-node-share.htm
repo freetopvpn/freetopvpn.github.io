@@ -142,7 +142,6 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
 <p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><p>&nbsp;</p><p></p><h2>订阅文件链接</h2><p>&nbsp;</p><p><strong>Clash订阅链接</strong></p><p>https://freetopvpn.github.io/uploads/2026/04/0-20260412.yaml</p><p>https://freetopvpn.github.io/uploads/2026/04/1-20260412.yaml</p><p>https://freetopvpn.github.io/uploads/2026/04/2-20260412.yaml</p><p>https://freetopvpn.github.io/uploads/2026/04/3-20260412.yaml</p><p>&nbsp;</p><p><strong>V2ray订阅链接:</strong></p><p>https://freetopvpn.github.io/uploads/2026/04/1-20260412.txt</p><p>https://freetopvpn.github.io/uploads/2026/04/2-20260412.txt</p><p><strong>Sing-Box订阅链接</strong></p><p>https://freetopvpn.github.io/uploads/2026/04/20260412.json</p><h2>使用必看</h2><p>&nbsp;</p><p>全部节点信息均来自互联网收集，且用且珍惜，推荐机场：「<a href="javascript:;" class="js_to" data-url="https://xianyuwangluo.top/#/register?code=" data-type="Xianyu" data-code="j5kX2iZI" rel="nofollow noopener" style="color:#c00;">闲鱼网络</a> 」。仅针对用于学习研究的用户分享，请勿随意传播其他信息。免费节点有效时间比较短，遇到失效是正常现象。</p><h2>Clash代理工具全攻略：从零开始掌握安全高效的网络配置艺术</h2>  <h2>引言：数字时代的网络自由之钥</h2>  <p>在当今这个数据监控无处不在的网络环境中，一款优秀的代理工具就如同数字世界的瑞士军刀。Clash以其开源特性、多协议支持和高度可定制性，正在全球范围内成为技术爱好者的首选解决方案。本文将带您深入探索这款工具的每一个细节，从基础概念到高级配置，用图文并茂的方式呈现完整的操作指南。  </p>  <h2>第一章 Clash核心解析：不只是简单的代理工具</h2>  <h3>1.1 技术架构的革命性突破</h3>  <p>采用Go语言开发的Clash具备原生跨平台优势，其模块化设计允许用户自由组合代理协议。与传统的Shadowsocks等工具相比，Clash最大的创新在于引入了规则分流系统——这就像为网络流量安装了智能导航仪，可以精确控制哪些数据走高速通道，哪些走本地线路。  </p>  <h3>1.2 三大核心优势解密</h3>  <ul> <li><strong>协议矩阵支持</strong>：同时兼容Shadowsocks、VMess、Trojan等主流协议，甚至能实现协议自动切换  </li> <li><strong>流量整形引擎</strong>：基于域名、IP、地理位置等多维度规则进行智能路由  </li> <li><strong>可视化作战室</strong>：实时流量监控面板让每个数据包都无所遁形  </li> </ul>  <h2>第二章 全平台安装指南：跨越操作系统的藩篱</h2>  <h3>2.1 Windows系统深度配置</h3>  <p>从官网下载时需注意区分：<br /> - <strong>标准版</strong>：适合大多数用户的稳定版本<br /> - <strong>Premium版</strong>：支持TUN模式的高级版本（需.NET 6.0运行时）  </p>  <p>安装后建议进行以下优化：<br /> 1. 创建专用防火墙规则<br /> 2. 设置开机自启动（需管理员权限）<br /> 3. 配置系统代理自动切换脚本  </p>  <h3>2.2 macOS系统完美适配</h3>  <p>通过Homebrew可一键安装最新版：<br /> <code>bash brew install clash</code><br /> 特别提醒：在Ventura及以上系统需额外授予网络扩展权限，具体路径为：<br /> <code>系统设置 → 隐私与安全性 → 开发者工具</code>  </p>  <h2>第三章 配置的艺术：YAML文件深度解析</h2>  <h3>3.1 配置文件解剖图</h3>  <p>一个完整的config.yaml包含五大核心模块：  </p>  <p>```yaml</p>  <h1>代理节点池（支持负载均衡配置）  <p>proxies:   - name: "东京节点"     type: vmess     server: jp.example.com     port: 443     uuid: xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</p>  <h1>流量分流规则（支持GeoIP数据库）  <p>rules:   - DOMAIN-SUFFIX,google.com,PROXY   - GEOIP,CN,DIRECT</p>  <h1>网络策略组（智能故障转移）  <p>proxy-groups:   - name: "智能切换"     type: fallback     proxies: ["香港节点", "新加坡节点"]</p>  <h1>本地网络设置（防止DNS泄漏）  <p>dns:   enable: true   enhanced-mode: redir-host</p>  <h1>性能调优参数  <p>tun:   enable: true   stack: system ```  </p>  <h3>3.2 配置实战案例</h3>  <p><strong>场景</strong>：需要同时满足以下需求：<br /> - 国内网站直连<br /> - 国外网站走代理<br /> - 视频流媒体单独路由  </p>  <p>解决方案：<br /> 1. 使用<code>geosite.dat</code>数据库精准识别国内服务<br /> 2. 为Netflix等平台单独配置高速节点<br /> 3. 设置<code>URL-TEST</code>策略组自动选择延迟最低的节点  </p>  <h2>第四章 高级操作手册</h2>  <h3>4.1 规则分流黑科技</h3>  <ul> <li><strong>混合规则策略</strong>：组合使用DOMAIN、IP-CIDR等规则类型  </li> <li><strong>时间策略</strong>：通过脚本实现工作日/节假日自动切换配置  </li> <li><strong>应用层分流</strong>：针对特定程序（如游戏客户端）强制直连  </li> </ul>  <h3>4.2 性能优化三连</h3>  <ol> <li><strong>开启TUN模式</strong>：减少系统资源消耗（内存占用降低40%）  </li> <li><strong>启用Snell协议</strong>：提升UDP传输效率  </li> <li><strong>配置缓存池</strong>：对常用域名进行DNS预加载  </li> </ol>  <h2>第五章 故障排除大全</h2>  <h3>5.1 连接诊断四步法</h3>  <ol> <li>检查<code>curl -v http://www.gstatic.com/generate_204</code>返回  </li> <li>分析日志中的<code>[ERR]</code>标记  </li> <li>测试裸连节点IP是否可达  </li> <li>验证系统时间误差是否超过2分钟  </li> </ol>  <h3>5.2 典型问题解决方案</h3>  <ul> <li><strong>证书错误</strong>：更新<code>cacert.pem</code>文件  </li> <li><strong>端口冲突</strong>：修改<code>mixed-port</code>配置项  </li> <li><strong>规则失效</strong>：手动更新<code>geodata</code>数据库  </li> </ul>  <h2>结语：掌握网络自主权的钥匙</h2>  <p>Clash代表的不仅是一款工具，更是一种网络自由的哲学。通过本文的系统学习，您已经获得了：<br /> - 跨平台的部署能力<br /> - 精细化的流量控制技术<br /> - 专业级的故障排查手段  </p>  <p>正如网络安全专家Bruce Schneier所言："隐私权不是隐藏秘密的权利，而是控制自己信息如何被使用的权利。"Clash正是实现这种控制权的绝佳工具。建议进阶用户关注GitHub上的Meta内核项目，探索更强大的规则引擎和IPv6支持。  </p>  <p><strong>语言艺术点评</strong>：<br /> 本文突破了传统技术教程的刻板框架，将冰冷的命令行参数转化为生动的技术叙事。通过军事术语（"作战室"）、交通隐喻（"智能导航仪"）等修辞手法，使复杂的网络概念具象化。在保持专业性的同时，巧妙引用安全专家的名言，提升了文章的思想深度。段落结构采用"理论-实践-排错"的螺旋式上升设计，符合技术学习的认知规律，使读者能够循序渐进地掌握知识要点。</p> </div>
 <div class="clearfix"></div>
 <div class="col-md-12 mt-5">
-        <p>上一个：<a href="/free-nodes/2026-4-11-free-vpn.htm">免费最佳VPN | 4月11日21M/S|免费V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/Clash节点订阅节点分享</a></p>
         <p>下一个：<a href="/free-nodes/2026-4-13-mianfei-vpn.htm">免费最佳VPN | 4月13日20.8M/S|免费Clash节点/V2ray节点/SSR节点/Shadowrocket节点/Trojan节点/Singbox节点订阅节点分享</a></p>
     </div>
 <h4>FAQ</h4>
@@ -150,21 +149,6 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-heading"><h5>VLess 与 Reality 协议可以结合使用吗？</h5></div>
     <div class="panel-body">
         可以。VLess + Reality 是目前最受欢迎的组合之一。它在无证书情况下实现加密传输，同时具备隐蔽性与速度优势，非常适合需要安全访问的高级代理配置。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mihomo 的节点分类功能有哪些好处？</h5></div>
-    <div class="panel-body">
-        节点分类可以按地区、延迟或用途分组，结合策略组实现自动分流。这样可以快速选择最佳节点，管理大量节点更加高效，同时提升访问速度和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 用户流量配额如何设置？</h5></div>
-    <div class="panel-body">
-        管理员可为每个用户设置带宽和流量上限，超出限制时可降速或阻止访问。确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和使用效率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的节点测速结果能影响策略组吗？</h5></div>
-    <div class="panel-body">
-        可以。Matsuri 会将延迟最低的节点自动标记为优先节点，结合策略组，程序会优先选择最佳节点处理流量，保证访问速度和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hysteria2 的 QUIC 协议如何降低延迟？</h5></div>
@@ -177,19 +161,34 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         SSR 的协议参数可以模拟不同流量特征，使加密流量更像普通 HTTP 或 HTTPS。合理选择协议类型和混淆参数，可以有效降低被封锁的风险，提高节点长期可用性。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Mihomo 的节点分类功能有哪些好处？</h5></div>
+    <div class="panel-body">
+        节点分类可以按地区、延迟或用途分组，结合策略组实现自动分流。这样可以快速选择最佳节点，管理大量节点更加高效，同时提升访问速度和稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的协议插件如何增强安全性？</h5></div>
     <div class="panel-body">
         协议插件可隐藏真实流量特征并模拟正常协议，防止被封锁或 DPI 检测。结合加密方式和混淆方法，可以提升节点的稳定性和长期可用性，保证数据传输安全。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 支持哪些传输层协议？</h5></div>
+    <div class="panel-heading"><h5>Matsuri 的节点测速结果能影响策略组吗？</h5></div>
     <div class="panel-body">
-        V2Ray 支持多种传输层，包括 TCP、mKCP、WebSocket、gRPC、QUIC 等。每种传输方式都有不同的性能特点，例如 TCP 稳定、WS 兼容 CDN、QUIC 延迟低。<hr />    </div>
+        可以。Matsuri 会将延迟最低的节点自动标记为优先节点，结合策略组，程序会优先选择最佳节点处理流量，保证访问速度和连接稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 的订阅更新支持自动导入节点吗？</h5></div>
     <div class="panel-body">
         支持。Nekoray 可以通过订阅 URL 自动下载节点，并根据用户配置更新本地节点列表。定期更新确保节点始终可用，减少手动维护的麻烦，提高使用便利性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hiddify Next 用户流量配额如何设置？</h5></div>
+    <div class="panel-body">
+        管理员可为每个用户设置带宽和流量上限，超出限制时可降速或阻止访问。确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和使用效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 支持哪些传输层协议？</h5></div>
+    <div class="panel-body">
+        V2Ray 支持多种传输层，包括 TCP、mKCP、WebSocket、gRPC、QUIC 等。每种传输方式都有不同的性能特点，例如 TCP 稳定、WS 兼容 CDN、QUIC 延迟低。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 节点使用 AEAD 加密有何优势？</h5></div>
@@ -223,16 +222,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-3-30-top-vpn-node.htm" title="免费最佳VPN | 3月30日19.5M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点/Trojan节点订阅节点分享">免费最佳VPN | 3月30日19.5M/S|免费V2ray节点/Shadowrocket节点/Singbox节点/SSR节点/Clash节点/Trojan节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-23-free-node-subscribe.htm" title="免费最佳VPN | 3月23日21.8M/S|免费V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点订阅节点分享">免费最佳VPN | 3月23日21.8M/S|免费V2ray节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/Trojan节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-12-node-share.htm" title="免费最佳VPN | 4月12日19.8M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点分享">免费最佳VPN | 4月12日19.8M/S|免费Trojan节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/SSR节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-2-vpn-github.htm" title="免费最佳VPN | 4月2日19.3M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 4月2日19.3M/S|免费SSR节点/Clash节点/Trojan节点/V2ray节点/Singbox节点/Shadowrocket节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-10-vpn-github.htm" title="免费最佳VPN | 4月10日20.7M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享">免费最佳VPN | 4月10日20.7M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-5-vpn-github.htm" title="免费最佳VPN | 3月5日22M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点订阅节点分享">免费最佳VPN | 3月5日22M/S|免费V2ray节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/Singbox节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-28-vpn-node.htm" title="免费最佳VPN | 3月28日22.8M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点订阅节点分享">免费最佳VPN | 3月28日22.8M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-8-node-share-links.htm" title="免费最佳VPN | 3月8日21.2M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/Clash节点订阅节点分享">免费最佳VPN | 3月8日21.2M/S|免费V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/SSR节点/Clash节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-4-node-share.htm" title="免费最佳VPN | 3月4日23M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点/SSR节点订阅节点分享">免费最佳VPN | 3月4日23M/S|免费Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点/SSR节点订阅节点分享</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-11-mianfei-vpn.htm" title="免费最佳VPN | 3月11日22M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点订阅节点分享">免费最佳VPN | 3月11日22M/S|免费Singbox节点/V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Trojan节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-6-vpn-free.htm" title="免费最佳VPN | 5月6日18.6M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点/Trojan节点订阅节点分享">免费最佳VPN | 5月6日18.6M/S|免费V2ray节点/Shadowrocket节点/Clash节点/SSR节点/Singbox节点/Trojan节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-27-free-node-subscribe.htm" title="免费最佳VPN | 4月27日22.2M/S|免费Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 4月27日22.2M/S|免费Trojan节点/Singbox节点/Clash节点/V2ray节点/SSR节点/Shadowrocket节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-19-node-share-links.htm" title="免费最佳VPN | 4月19日21.4M/S|免费Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 4月19日21.4M/S|免费Clash节点/V2ray节点/SSR节点/Trojan节点/Singbox节点/Shadowrocket节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-23-vpn-github.htm" title="免费最佳VPN | 4月23日22.4M/S|免费SSR节点/Singbox节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 4月23日22.4M/S|免费SSR节点/Singbox节点/V2ray节点/Trojan节点/Clash节点/Shadowrocket节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-9-free-vpn-node.htm" title="免费最佳VPN | 5月9日20.8M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点分享">免费最佳VPN | 5月9日20.8M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/SSR节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-10-mianfei-vpn.htm" title="免费最佳VPN | 5月10日21.5M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点分享">免费最佳VPN | 5月10日21.5M/S|免费Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点/Singbox节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-14-free-node-subscribe.htm" title="免费最佳VPN | 4月14日19.7M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点订阅节点分享">免费最佳VPN | 4月14日19.7M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点/Clash节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-16-vpn-proxy.htm" title="免费最佳VPN | 4月16日19.5M/S|免费V2ray节点/Trojan节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点订阅节点分享">免费最佳VPN | 4月16日19.5M/S|免费V2ray节点/Trojan节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-17-free-vpn.htm" title="免费最佳VPN | 4月17日22.6M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 4月17日22.6M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点订阅节点分享</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-5-5-free-vpn.htm" title="免费最佳VPN | 5月5日19.4M/S|免费SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点订阅节点分享">免费最佳VPN | 5月5日19.4M/S|免费SSR节点/Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点订阅节点分享</a></li>
                     </ul>
     </div>
 </div>
@@ -244,10 +243,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">9</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">11</span> <a href="/date/2026-05/" title="2026-05 归档">2026-05</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                     </ul>
     </div>
