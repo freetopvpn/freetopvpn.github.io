@@ -321,29 +321,14 @@ UDP提供更低的延迟和更快的数据传输，减少游戏中的卡顿和�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 节点延迟排序功能如何使用？</h5></div>
-    <div class="panel-body">
-        Matsuri 会定期测速节点延迟，并根据结果排序。用户可选择延迟最低的节点进行访问，结合策略组实现自动切换，提高网络速度和连接稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统全局代理有何区别？</h5></div>
-    <div class="panel-body">
-        TUN 模式直接拦截 IP 层流量，不依赖应用代理设置，系统全局代理通常只影响支持 HTTP/HTTPS 的程序。TUN 更适合全局科学上网和游戏环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 是否支持多客户端节点管理？</h5></div>
     <div class="panel-body">
         支持。Nekobox 可以独立管理 Shadowsocks、Clash 等客户端节点，互不干扰。结合策略组，可实现多客户端流量分流和网络优化，提高节点管理效率和使用便利性。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的混淆插件有什么作用？</h5></div>
+    <div class="panel-heading"><h5>Clash 节点测速如何提高访问效率？</h5></div>
     <div class="panel-body">
-        混淆插件用于伪装流量，使其看起来像普通的 HTTP 或 TLS 请求。常见类型有 plain、tls1.2_ticket_auth 等。合理设置混淆能有效降低被识别的风险，提升连接成功率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>如何配置 Clash 以支持局域网内设备共享代理？</h5></div>
-    <div class="panel-body">
-        启用 Clash 的 HTTP/SOCKS5 本地监听并在局域网设备上设置该代理地址为网关；若使用 TUN 模式需配合路由器或透明代理实现全局共享，注意开启访问控制避免未经授权的外部访问。<hr />    </div>
+        Clash 会周期性检测节点延迟和丢包率，根据测试结果自动选择最优节点。结合策略组和分流规则，用户可体验更快的网页加载、视频播放和游戏连接速度，提高整体网络效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 的 Rule Provider 有什么作用？</h5></div>
@@ -356,19 +341,34 @@ UDP提供更低的延迟和更快的数据传输，减少游戏中的卡顿和�
         避免使用常见端口（如 80、443）直接暴露 V2Ray 服务；若必须使用 443，建议通过 Web 服务器反代或使用 CDN；同时启用 fail2ban 与 iptables 限制异常连接频率，减少被扫描发现的风险。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Mellow 的 TUN 模式与系统全局代理有何区别？</h5></div>
+    <div class="panel-body">
+        TUN 模式直接拦截 IP 层流量，不依赖应用代理设置，系统全局代理通常只影响支持 HTTP/HTTPS 的程序。TUN 更适合全局科学上网和游戏环境。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 的混淆插件有什么作用？</h5></div>
+    <div class="panel-body">
+        混淆插件用于伪装流量，使其看起来像普通的 HTTP 或 TLS 请求。常见类型有 plain、tls1.2_ticket_auth 等。合理设置混淆能有效降低被识别的风险，提升连接成功率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 节点延迟排序功能如何使用？</h5></div>
+    <div class="panel-body">
+        Matsuri 会定期测速节点延迟，并根据结果排序。用户可选择延迟最低的节点进行访问，结合策略组实现自动切换，提高网络速度和连接稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>Sing-box 如何实现域名精确分流？</h5></div>
     <div class="panel-body">
         Sing-box 支持按域名匹配流量，将不同应用流量分配到指定节点。结合策略组使用，可自动选择最优节点，提高访问速度和网络稳定性，实现精确流量管理。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何为 Vmess 节点生成安全的 UUID？</h5></div>
+    <div class="panel-heading"><h5>如何配置 Clash 以支持局域网内设备共享代理？</h5></div>
     <div class="panel-body">
-        UUID 应使用标准的 128 位格式，可使用系统命令如 `uuidgen` 或在线 UUID 生成器生成随机、唯一的 ID；不要使用默认或弱随机值，定期更换以降低被滥用或泄露的风险。<hr />    </div>
+        启用 Clash 的 HTTP/SOCKS5 本地监听并在局域网设备上设置该代理地址为网关；若使用 TUN 模式需配合路由器或透明代理实现全局共享，注意开启访问控制避免未经授权的外部访问。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 节点测速如何提高访问效率？</h5></div>
+    <div class="panel-heading"><h5>如何为 Vmess 节点生成安全的 UUID？</h5></div>
     <div class="panel-body">
-        Clash 会周期性检测节点延迟和丢包率，根据测试结果自动选择最优节点。结合策略组和分流规则，用户可体验更快的网页加载、视频播放和游戏连接速度，提高整体网络效率。    </div>
+        UUID 应使用标准的 128 位格式，可使用系统命令如 `uuidgen` 或在线 UUID 生成器生成随机、唯一的 ID；不要使用默认或弱随机值，定期更换以降低被滥用或泄露的风险。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -398,11 +398,11 @@ UDP提供更低的延迟和更快的数据传输，减少游戏中的卡顿和�
     <div class="panel-body">
         <div class="row">
             <div class="text-center">
-                <a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
+                <a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">
                     <img src="/assets/website/img/G/xingchen.webp" class="avatar" alt="星辰机场">
                 </a>
                 <dl>
-                    <dt><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
+                    <dt><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></dt>
                     <dd>
                         <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p>                    </dd>
                 </dl>
@@ -416,16 +416,16 @@ UDP提供更低的延迟和更快的数据传输，减少游戏中的卡顿和�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-5.htm" title="免费最佳VPN | 9月5日20.2M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享">免费最佳VPN | 9月5日20.2M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-24-vpn-free.htm" title="免费最佳VPN | 10月24日21.9M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点订阅节点分享">免费最佳VPN | 10月24日21.9M/S|免费V2ray节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-9-27.htm" title="免费最佳VPN | 9月27日21.8M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点订阅节点分享">免费最佳VPN | 9月27日21.8M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-17.htm" title="免费最佳VPN | 9月17日18.8M/S|免费SSR节点/Trojan节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 9月17日18.8M/S|免费SSR节点/Trojan节点/V2ray节点/Singbox节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-28-free-vpn-node.htm" title="免费最佳VPN | 9月28日22.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点订阅节点分享">免费最佳VPN | 9月28日22.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-14-free-vpn-node.htm" title="免费最佳VPN | 10月14日18.1M/S|免费Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点订阅节点分享">免费最佳VPN | 10月14日18.1M/S|免费Trojan节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点/V2ray节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-24-top-vpn-node.htm" title="免费最佳VPN | 9月24日20.9M/S|免费Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 9月24日20.9M/S|免费Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-10-node-share.htm" title="免费最佳VPN | 9月10日19.7M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点订阅节点分享">免费最佳VPN | 9月10日19.7M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-8-free-vpn-node.htm" title="免费最佳VPN | 10月8日22.1M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 10月8日22.1M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-25.htm" title="免费最佳VPN | 9月25日20.1M/S|免费Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点分享">免费最佳VPN | 9月25日20.1M/S|免费Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/share-vpn-2026-10-15.htm" title="免费最佳VPN | 10月15日18.8M/S|免费Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点/SSR节点订阅节点分享">免费最佳VPN | 10月15日18.8M/S|免费Shadowrocket节点/Clash节点/Singbox节点/Trojan节点/V2ray节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-10-31.htm" title="免费最佳VPN | 10月31日19.7M/S|免费Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享">免费最佳VPN | 10月31日19.7M/S|免费Singbox节点/Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-node-subscribe.htm" title="免费最佳VPN | 9月2日20.4M/S|免费SSR节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 9月2日20.4M/S|免费SSR节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-10-28-node-share.htm" title="免费最佳VPN | 10月28日22.9M/S|免费SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享">免费最佳VPN | 10月28日22.9M/S|免费SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-10-17.htm" title="免费最佳VPN | 10月17日19.3M/S|免费Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享">免费最佳VPN | 10月17日19.3M/S|免费Trojan节点/Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-10-27.htm" title="免费最佳VPN | 10月27日21.9M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点订阅节点分享">免费最佳VPN | 10月27日21.9M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-9-7.htm" title="免费最佳VPN | 9月7日22.1M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点/Singbox节点订阅节点分享">免费最佳VPN | 9月7日22.1M/S|免费Shadowrocket节点/Trojan节点/V2ray节点/Clash节点/SSR节点/Singbox节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-vpn-2026-9-27.htm" title="免费最佳VPN | 9月27日21.8M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点订阅节点分享">免费最佳VPN | 9月27日21.8M/S|免费V2ray节点/Trojan节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-28-free-vpn-node.htm" title="免费最佳VPN | 9月28日22.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点订阅节点分享">免费最佳VPN | 9月28日22.4M/S|免费Shadowrocket节点/Singbox节点/Clash节点/Trojan节点/V2ray节点/SSR节点订阅节点分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -437,7 +437,10 @@ UDP提供更低的延迟和更快的数据传输，减少游戏中的卡顿和�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
+                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
@@ -471,7 +474,7 @@ UDP提供更低的延迟和更快的数据传输，减少游戏中的卡顿和�
                         <a href="/privacy.htm">隐私申明</a> |
                         <a href="/sitemap.xml">网站地图</a>
                     </p>
-                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://c.kilxs.cn/?path=register&code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
+                                        <div>特别推荐：<b><a href="javascript:;" class="js_to" data-url="https://xc1.luniu8.com/?code=" data-type="Xingchen" data-code="tlc6gYYx" target="_blank">星辰机场</a></b> <p>【包年送2个月】</p><p>1、购买入门版年付套餐额外送2个月，共14个月，只要99元！！！</p><p>2、购买“至尊天皇”年付套餐，额外送2个月，只要299元！！！</p><p>3、购买其他包月类套餐中的年付，同样送2个月！！！</p><p>错过要再等一年！！</p></div>
                                                 免费最佳VPN 推荐VPN免费节点订阅官网 版权所有 Powered by WordPress
                         </div>
                         <div class="col-md-6 text-center text-md-end">
