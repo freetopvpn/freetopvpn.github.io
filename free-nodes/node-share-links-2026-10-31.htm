@@ -305,19 +305,9 @@ A：可以尝试配合 Surge 或 Quantumult X 等工具，它们支持更精细�
         在 PassWall2 中，规则的匹配顺序按配置文件自上而下执行。建议将精确规则放在前面，通用规则放后面，以确保高优先级的流量优先被正确分流到指定出口。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何更新 Clash 的订阅节点？</h5></div>
+    <div class="panel-heading"><h5>Hiddify Next 如何实现用户流量分配？</h5></div>
     <div class="panel-body">
-        在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 节点延迟高、丢包严重，常见排查步骤有哪些？</h5></div>
-    <div class="panel-body">
-        先用 ping 和 traceroute 检查到服务器的延迟与路由跳数；再通过测速工具测带宽并尝试更换不同出站端口或混淆方式；若仍然不稳，考虑更换节点或联系客服查看服务端链路质量。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 的节点测速功能有何局限？</h5></div>
-    <div class="panel-body">
-        Potatso Lite 节点测速只能显示延迟，无法测出带宽或实际下载速度。此外，测速结果受网络波动影响较大，建议结合实际使用体验来判断节点性能。<hr />    </div>
+        管理员可为每个用户设置带宽和流量配额。超出限制时可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Clash 订阅被墙或无法下载如何绕过？</h5></div>
@@ -325,9 +315,19 @@ A：可以尝试配合 Surge 或 Quantumult X 等工具，它们支持更精细�
         若订阅源被直接屏蔽，可尝试先在境外服务器上用代理代理获取订阅并通过中转服务器公开一个新的链接；或者使用 HTTPS 与 CDN 中转、或将订阅以文件形式托管在不易被封的云存储上。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 如何使用 WebSocket 传输？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 策略组如何优化视频访问？</h5></div>
     <div class="panel-body">
-        在 V2Ray 配置文件中将传输方式设置为 ws，即启用 WebSocket 模式。结合 CDN 和 TLS，可实现安全高速的代理链路。WebSocket 常用于伪装成 HTTPS 流量，从而降低被识别风险。<hr />    </div>
+        通过策略组将视频流量分配到低延迟、高带宽节点，Surfboard 可自动切换到最佳节点。减少缓冲和卡顿，提高在线视频播放流畅性和整体网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>如何更新 Clash 的订阅节点？</h5></div>
+    <div class="panel-body">
+        在 Clash 中更新订阅节点，只需在配置页面中点击“Update”或“Refresh”按钮即可。系统会重新下载订阅链接中的内容，自动替换旧节点。这样能确保用户随时获取最新可用节点，避免连接失败或延迟过高。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 在 iOS 上无法连接时如何调试？</h5></div>
+    <div class="panel-body">
+        检查 iOS 的 VPN 配置权限是否授予，确认订阅链接或手动配置填写无误；查看 Surfboard 的日志或诊断页面，查看是否为 DNS 问题、TLS 错误或节点超时，并尝试切换节点或重启应用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>SSR 的协议和混淆如何影响连接稳定性？</h5></div>
@@ -335,19 +335,19 @@ A：可以尝试配合 Surge 或 Quantumult X 等工具，它们支持更精细�
         不同协议和混淆方式对抗 DPI 和封锁能力不同。合理选择可隐藏真实流量特征，减少被封锁风险，提高连接稳定性和访问速度，确保节点长期可用。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 策略组如何优化视频访问？</h5></div>
+    <div class="panel-heading"><h5>Potatso Lite 的节点测速功能有何局限？</h5></div>
     <div class="panel-body">
-        通过策略组将视频流量分配到低延迟、高带宽节点，Surfboard 可自动切换到最佳节点。减少缓冲和卡顿，提高在线视频播放流畅性和整体网络体验。<hr />    </div>
+        Potatso Lite 节点测速只能显示延迟，无法测出带宽或实际下载速度。此外，测速结果受网络波动影响较大，建议结合实际使用体验来判断节点性能。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Hiddify Next 如何实现用户流量分配？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 如何使用 WebSocket 传输？</h5></div>
     <div class="panel-body">
-        管理员可为每个用户设置带宽和流量配额。超出限制时可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。<hr />    </div>
+        在 V2Ray 配置文件中将传输方式设置为 ws，即启用 WebSocket 模式。结合 CDN 和 TLS，可实现安全高速的代理链路。WebSocket 常用于伪装成 HTTPS 流量，从而降低被识别风险。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 在 iOS 上无法连接时如何调试？</h5></div>
+    <div class="panel-heading"><h5>SSR 节点延迟高、丢包严重，常见排查步骤有哪些？</h5></div>
     <div class="panel-body">
-        检查 iOS 的 VPN 配置权限是否授予，确认订阅链接或手动配置填写无误；查看 Surfboard 的日志或诊断页面，查看是否为 DNS 问题、TLS 错误或节点超时，并尝试切换节点或重启应用。    </div>
+        先用 ping 和 traceroute 检查到服务器的延迟与路由跳数；再通过测速工具测带宽并尝试更换不同出站端口或混淆方式；若仍然不稳，考虑更换节点或联系客服查看服务端链路质量。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -395,16 +395,16 @@ A：可以尝试配合 Surge 或 Quantumult X 等工具，它们支持更精细�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-9-23.htm" title="免费最佳VPN | 9月23日20.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点/Trojan节点订阅节点分享">免费最佳VPN | 9月23日20.2M/S|免费Shadowrocket节点/Clash节点/V2ray节点/Singbox节点/SSR节点/Trojan节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-8-vpn-node.htm" title="免费最佳VPN | 9月8日20.9M/S|免费Singbox节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点订阅节点分享">免费最佳VPN | 9月8日20.9M/S|免费Singbox节点/V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-8-free-vpn-node.htm" title="免费最佳VPN | 10月8日22.1M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 10月8日22.1M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-28-node-share.htm" title="免费最佳VPN | 10月28日22.9M/S|免费SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享">免费最佳VPN | 10月28日22.9M/S|免费SSR节点/V2ray节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-10-22-vpn-free.htm" title="免费最佳VPN | 10月22日22.2M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点订阅节点分享">免费最佳VPN | 10月22日22.2M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/share-vpn-2026-10-5.htm" title="免费最佳VPN | 10月5日19.2M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点订阅节点分享">免费最佳VPN | 10月5日19.2M/S|免费SSR节点/Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/Singbox节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-10-7.htm" title="免费最佳VPN | 10月7日20.8M/S|免费Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点订阅节点分享">免费最佳VPN | 10月7日20.8M/S|免费Singbox节点/Trojan节点/SSR节点/V2ray节点/Shadowrocket节点/Clash节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-20-free-vpn-node.htm" title="免费最佳VPN | 9月20日21.1M/S|免费Clash节点/V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点订阅节点分享">免费最佳VPN | 9月20日21.1M/S|免费Clash节点/V2ray节点/Trojan节点/Singbox节点/Shadowrocket节点/SSR节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/mianfei-vpn-2026-10-13.htm" title="免费最佳VPN | 10月13日21M/S|免费Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 10月13日21M/S|免费Clash节点/Trojan节点/V2ray节点/Singbox节点/SSR节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-11.htm" title="免费最佳VPN | 9月11日20.5M/S|免费V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点订阅节点分享">免费最佳VPN | 9月11日20.5M/S|免费V2ray节点/Clash节点/Singbox节点/Trojan节点/Shadowrocket节点/SSR节点订阅节点分享</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-25.htm" title="免费最佳VPN | 9月25日20.1M/S|免费Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点分享">免费最佳VPN | 9月25日20.1M/S|免费Singbox节点/Trojan节点/SSR节点/Clash节点/Shadowrocket节点/V2ray节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-9-2-free-node-subscribe.htm" title="免费最佳VPN | 9月2日20.4M/S|免费SSR节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 9月2日20.4M/S|免费SSR节点/Singbox节点/Trojan节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-links-2026-9-21.htm" title="免费最佳VPN | 9月21日22.7M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点/Trojan节点订阅节点分享">免费最佳VPN | 9月21日22.7M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/V2ray节点/Trojan节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-10-node-share.htm" title="免费最佳VPN | 9月10日19.7M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点订阅节点分享">免费最佳VPN | 9月10日19.7M/S|免费Singbox节点/Shadowrocket节点/SSR节点/Clash节点/V2ray节点/Trojan节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/top-vpn-2026-9-5.htm" title="免费最佳VPN | 9月5日20.2M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享">免费最佳VPN | 9月5日20.2M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点/Trojan节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-vpn-proxy.htm" title="免费最佳VPN | 9月4日20.3M/S|免费Trojan节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 9月4日20.3M/S|免费Trojan节点/Singbox节点/V2ray节点/SSR节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/vpn-github-2026-9-3.htm" title="免费最佳VPN | 9月3日20.9M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点订阅节点分享">免费最佳VPN | 9月3日20.9M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Clash节点/V2ray节点/Singbox节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-6-free-vpn-node.htm" title="免费最佳VPN | 9月6日21.2M/S|免费V2ray节点/Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 9月6日21.2M/S|免费V2ray节点/Singbox节点/SSR节点/Trojan节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-24-top-vpn-node.htm" title="免费最佳VPN | 9月24日20.9M/S|免费Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享">免费最佳VPN | 9月24日20.9M/S|免费Trojan节点/Singbox节点/SSR节点/V2ray节点/Clash节点/Shadowrocket节点订阅节点分享</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -416,7 +416,7 @@ A：可以尝试配合 Surge 或 Quantumult X 等工具，它们支持更精细�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">1</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
+                <h4><span class="badge" style="float: right;">8</span> <a href="/date/2026-11/" title="2026-11 归档">2026-11</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">30</span> <a href="/date/2026-10/" title="2026-10 归档">2026-10</a></h4>
